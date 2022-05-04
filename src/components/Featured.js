@@ -118,15 +118,15 @@ function Featured() {
 								{idx === current && (
 									<img src={item.src} alt={`data-${idx}`} className="image" />
 								)}
+								<span className="absolute bottom-[35px] text-gray-600 right-2 italic text-[10px]">
+									joelarueyastudio
+								</span>
 							</div>
 						))}
 						<span
 							onClick={() => setModal(false)}
 							className="absolute hover:cursor-pointer top-[30%] right-0 px-5 italic text-lg bg-blur">
 							close
-						</span>
-						<span className="absolute bottom-[110px] italic text-xs">
-							joelarueyastudio
 						</span>
 					</div>
 				</div>
