@@ -293,12 +293,29 @@ html {
 	width: 100%;
 	left: 0;
 }
+.home {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-image: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 0.9),
+			rgba(0, 0, 0, 0.9)
+		),
+		url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602158/joel/art4_aiv5yw.jpg');
+}
 /* Grid */
 .container {
-	width: 100%;
+	width: 80%;
 	max-width: 120rem;
 	margin: auto;
 	padding: 0 0.5rem;
+}
+@media screen and (max-width: 600px) {
+	.container {
+		width: 100%;
+	}
 }
 .image-gallery {
 	display: grid;
@@ -384,7 +401,7 @@ html {
 }
 .img-8 {
 	grid-area: img-8;
-	min-height: 31rem;
+	min-height: 30.8rem;
 	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602160/joel/art8_id3zzf.jpg');
 }
 .img-9 {
@@ -402,24 +419,31 @@ html {
 .slider {
 	position: relative;
 	height: 100vh;
+	padding-top: 400px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-top: 200px;
 }
 .image {
-	height: 600px;
 	border-radius: 10px;
-	object-fit: contain;
+	width: 550px;
+	object-fit: cover;
 	z-index: 10;
 	border: 1px solid rgb(255, 255, 255);
 	border-bottom: 50px solid rgb(255, 255, 255);
 	border-top: 50px solid rgb(255, 255, 255);
 }
+@media screen and (max-width: 600px) {
+	.image {
+		border: none;
+		width: 90%;
+		height: 100vh;
+		margin: 0 auto;
+	}
+}
 .right-arrow {
 	position: absolute;
 	top: 47%;
-	right: 20%;
 	font-size: 3rem;
 	color: white;
 	z-index: 10;
@@ -429,7 +453,6 @@ html {
 .left-arrow {
 	position: absolute;
 	top: 47%;
-	left: 20%;
 	font-size: 3rem;
 	color: white;
 	z-index: 10;

@@ -12,8 +12,10 @@ const Home = function () {
 			</Helmet>
 
 			<Layout>
-				<Banner />
-				<Featured />
+				<div className="home">
+					<Banner />
+					<Featured />
+				</div>
 			</Layout>
 		</>
 	)

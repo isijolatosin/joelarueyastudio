@@ -25,7 +25,7 @@ function Featured() {
 
 	return (
 		<div className="relative flex flex-col items-center w-full">
-			<p className="w-[40%] font-light text-center text-sm py-10">
+			<p className="w-[40%] text-white font-light text-center text-md py-32">
 				Lorem Ipsum is simply dummy text of the printing and typesetting
 				industry. Lorem Ipsum has been the industry's standard dummy text ever
 				since the 1500s, when an unknown printer took a galley of type and
@@ -33,8 +33,8 @@ function Featured() {
 				centuries, but also the leap into electronic typesetting, remaining
 				essentially unchanged.
 			</p>
-			<div className="flex flex-col w-full items-center">
-				<h1 className="text-gray-600 mb-7">FEATURED ART WORKS</h1>
+			<div className="flex flex-col w-full items-center bg-[rgba(255,255,255,1)] pt-3">
+				<h1 className="text-gray-700 mb-7">FEATURED ART WORKS</h1>
 				<div className="container">
 					<div className="image-gallery">
 						<div className="img-1">
@@ -107,25 +107,33 @@ function Featured() {
 				</div>
 			</div>
 			{modal && (
-				<div className="absolute bg-[rgba(0,0,0,0.8)] w-full h-full z-20">
-					<FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-					<FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+				<div className="absolute bg-[rgba(0,0,0,0.8)] w-full md:h-full h-[screen] z-20">
+					<FaArrowAltCircleLeft
+						className="left-arrow left-0 md:left-[20%]"
+						onClick={prevSlide}
+					/>
+					<FaArrowAltCircleRight
+						className="right-arrow right-0 md:right-[20%]"
+						onClick={nextSlide}
+					/>
 					<div className="slider">
 						{data?.files.map((item, idx) => (
 							<div
 								key={idx}
 								className={idx === current ? 'slide active' : 'slide'}>
 								{idx === current && (
-									<img src={item.src} alt={`data-${idx}`} className="image" />
+									<div className="image">
+										<img src={item.src} alt={`data-${idx}`} />
+										<span className="absolute text-gray-600 right-6 italic text-[10px]">
+											joelarueyastudio
+										</span>
+									</div>
 								)}
-								<span className="absolute bottom-[35px] text-gray-600 right-2 italic text-[10px]">
-									joelarueyastudio
-								</span>
 							</div>
 						))}
 						<span
 							onClick={() => setModal(false)}
-							className="absolute hover:cursor-pointer top-[30%] right-0 px-5 italic text-lg bg-blur">
+							className="absolute hover:cursor-pointer top-10 md:top-[30%] right-0 px-5 italic text-lg bg-blur">
 							close
 						</span>
 					</div>
