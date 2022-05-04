@@ -7,7 +7,7 @@ const Search = ({ onChange, search, onSearch, data }) => {
 		<form
 			className="w-[80%] lg:w-[40%] mt-10 flex items-center"
 			onSubmit={onSearch}>
-			<div className="flex  rounded-full items-center bg-blur2  h-full w-[100%]">
+			<div className="flex rounded-full items-center bg-blur2  h-[30px] w-[100%]">
 				<input
 					type="text"
 					onChange={onChange}
@@ -20,15 +20,19 @@ const Search = ({ onChange, search, onSearch, data }) => {
 					joelarueyastudio
 				</span>
 				{data?.length ? (
-					<RiSearch2Fill
-						className="text-white w-[40px] hover:cursor-pointer"
-						onClick={onSearch}
-					/>
+					<div className=" rounded-r-full h-full flex flex-row items-center bg-yellow-600">
+						<RiSearch2Fill
+							className="text-white w-[40px] hover:cursor-pointer"
+							onClick={onSearch}
+						/>
+					</div>
 				) : (
-					<RiSearch2Line
-						className="text-white w-[40px] hover:cursor-pointer"
-						onClick={onSearch}
-					/>
+					<div className=" rounded-r-full h-full flex flex-row items-center bg-yellow-600">
+						<RiSearch2Line
+							className="text-white w-[40px] justify-center hover:cursor-pointer"
+							onClick={onSearch}
+						/>
+					</div>
 				)}
 			</div>
 		</form>
