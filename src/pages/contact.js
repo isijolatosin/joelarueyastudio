@@ -37,7 +37,7 @@ const Contact = function () {
 				<title>Contact</title>
 			</Helmet>
 			<Layout>
-				<div className="flex flex-row justify-center items-center">
+				<div className="flex flex-row justify-center items-center md:pt-10">
 					<form
 						onSubmit={handleSubmit}
 						className="w-full flex flex-col items-center md:max-w-[80%] bg-neutral-50 py-5 mb-5">

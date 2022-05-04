@@ -9,7 +9,7 @@ const Contact = function () {
 				<title>Contact</title>
 			</Helmet>
 			<Layout>
-				<div className="flex flex-row justify-center items-center">
+				<div className="flex flex-row justify-center items-center md:pt-10">
 					<p className="font-light text-center text-[14px] max-w-[80%] lg:max-w-[50%] my-5">
 						We at PVG International-s are customer centric, we take pride in our
 						customers. We are committed in helping with picking the right hair

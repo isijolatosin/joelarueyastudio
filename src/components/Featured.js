@@ -25,16 +25,10 @@ function Featured() {
 
 	return (
 		<div className="relative flex flex-col items-center w-full">
-			<p className="w-[40%] text-white font-light text-center text-md py-32">
-				Lorem Ipsum is simply dummy text of the printing and typesetting
-				industry. Lorem Ipsum has been the industry's standard dummy text ever
-				since the 1500s, when an unknown printer took a galley of type and
-				scrambled it to make a type specimen book. It has survived not only five
-				centuries, but also the leap into electronic typesetting, remaining
-				essentially unchanged.
-			</p>
-			<div className="flex flex-col w-full items-center bg-[rgba(255,255,255,1)] pt-3">
-				<h1 className="text-gray-700 mb-7">FEATURED ART WORKS</h1>
+			<div className="flex flex-col w-full items-center bg-[rgba(255,255,255,1)] pt-20 md:pt-32 rounded-t-[50px]  md:rounded-t-[200px]">
+				<h1 className="text-gray-700 text-lg md:text-2xl font-bold mb-7">
+					FEATURED ART WORKS
+				</h1>
 				<div className="container">
 					<div className="image-gallery">
 						<div className="img-1">

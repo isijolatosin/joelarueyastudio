@@ -3,6 +3,7 @@ import Layout from '../components/shared/Layout'
 import { Helmet } from 'react-helmet'
 import Banner from '../components/Banner'
 import Featured from '../components/Featured'
+import ShortAbout from '../components/ShortAbout'
 
 const Home = function () {
 	return (
@@ -14,6 +15,7 @@ const Home = function () {
 			<Layout>
 				<div className="home">
 					<Banner />
+					<ShortAbout />
 					<Featured />
 				</div>
 			</Layout>
