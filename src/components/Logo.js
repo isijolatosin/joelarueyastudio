@@ -11,7 +11,9 @@ const Logo = function () {
 		<div className="flex items-center justify center">
 			<Link to="/" className="flex items-center">
 				<FaArtstation className="text-neutral-900 mr-2 w-[30px] h-[30px]" />
-				<span className="text-cyan-900 font-normal">Joelarueyastudio</span>
+				<span className="text-cyan-900 font-normal navStyleChild">
+					Joelarueyastudio
+				</span>
 			</Link>
 			{(user?.email === AUTHORIZED_ID.id_one ||
 				user?.email === AUTHORIZED_ID.id_two) && (

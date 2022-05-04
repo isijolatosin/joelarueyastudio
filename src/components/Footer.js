@@ -12,13 +12,13 @@ function Footer() {
 					<span>• All right reserved</span>
 				</div>
 				<div className="md:flex ml-5">
-					<p className="">website develop by </p>
-					<p className="text-cyan-900 font-semibold ease-in duration-300 hover:text-cyan-500 ">
+					<p className="mr-1">website develop by - </p>
+					<p className="text-cyan-900 font-semibold ease-in duration-300 hover:text-gray-500 navStyleChild">
 						<a
 							href="https://www.linkedin.com/in/oluwatosin-isijola-33333ba8/"
 							target="_blank"
 							rel="noopener noreferrer">
-							- Tony Isijola
+							Tony Isijola
 						</a>
 					</p>
 				</div>
