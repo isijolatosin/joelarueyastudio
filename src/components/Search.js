@@ -14,7 +14,7 @@ const Search = ({ onChange, search, onSearch, data }) => {
 					value={search}
 					name="search"
 					placeholder="Search..."
-					className="w-full h-full text-sm bg-transparent border-0 text-white placeholder-white font-light"
+					className="focus:ring-0 w-full h-full text-sm bg-transparent border-0 text-white placeholder-white font-light"
 				/>
 				<span className="text-[10px] text-white font-light italic mr-3 border-l-[1px] pl-3">
 					joelarueyastudio
