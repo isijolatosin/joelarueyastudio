@@ -2,7 +2,6 @@ import axios from 'axios'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Search from '../components/Search'
-import Button from '../components/shared/Button'
 import Layout from '../components/shared/Layout'
 
 const Contact = function () {
