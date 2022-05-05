@@ -97,6 +97,30 @@ function Featured() {
 								className="icon"
 							/>
 						</div>
+						<div className="img-12">
+							<AiOutlineExpand
+								onClick={() => handleOpenModal(11)}
+								className="icon"
+							/>
+						</div>
+						<div className="img-13">
+							<AiOutlineExpand
+								onClick={() => handleOpenModal(12)}
+								className="icon"
+							/>
+						</div>
+						<div className="img-14">
+							<AiOutlineExpand
+								onClick={() => handleOpenModal(13)}
+								className="icon"
+							/>
+						</div>
+						<div className="img-15">
+							<AiOutlineExpand
+								onClick={() => handleOpenModal(14)}
+								className="icon"
+							/>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -43,7 +43,7 @@ function Shippment() {
 	})
 
 	const messageParams = {
-		name: user.displayName,
+		name: user?.displayName,
 		message: `Thank you for your patronage. Your order of ${itemObj?.[0]?.quantity} ${itemObj?.[0]?.name}, is being processed and your tracking information is: Tracking No - ${trackingNum.number}, Courier - ${trackingNum.courier}.`,
 		client: user?.email,
 	}
@@ -200,7 +200,7 @@ function Shippment() {
 					{shippingInfo?.shippingHeader?.length === 0 &&
 					shippingInfo?.shippingHeader?.length === 0 ? (
 						isLoading ? (
-							<span>Please hold, fetching PVG data...</span>
+							<span>Please hold, fetching joelarueyastudio data...</span>
 						) : (
 							<span>Data not Found</span>
 						)

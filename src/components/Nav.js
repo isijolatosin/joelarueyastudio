@@ -58,7 +58,7 @@ const Nav = function () {
 
 	return (
 		<div>
-			<div className="flex items-center justify-between shadow-lg px-5 pb-2 fixed z-40 w-full pt-1 md:w-[85%] mt-[-55px] md:mt-[-10px] md:h-[50px] bg-white">
+			<div className="flex items-center justify-between shadow-lg px-5 pb-2 fixed z-40 w-full pt-4 md:w-[85%] mt-[-55px] md:mt-[-10px] md:h-[50px] bg-white">
 				<Logo />
 				<div className="hidden md:inline navStyle">
 					{navLinks.map((nav) => (
@@ -118,7 +118,7 @@ const Nav = function () {
 					</div>
 				</div>
 			</div>
-			<div className="md:hidden w-[100%] mx-auto flex mt-5 justify-between">
+			<div className="md:hidden w-[100%] mx-auto flex mt-5 pt-5 justify-between">
 				{navLinks.map((nav) => (
 					<Link
 						onClick={() => setActive(nav.navName)}

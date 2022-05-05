@@ -2,14 +2,14 @@ import React from 'react'
 import Search from './Search'
 
 function Banner() {
-	const bannerImage = require('../images/banner1.jpeg')
+	// const bannerImage = require('../images/banner1.jpeg')
 	return (
-		<div className="relative">
-			<img
+		<div className="relative pt-[300px]">
+			{/* <img
 				src={bannerImage}
-				className="w-full h-[250px] object-cover object-center"
+				className="w-full h-[250px] object-cover object-bottom"
 				alt=""
-			/>
+			/> */}
 			<div className="absolute top-[40%] flex flex-col w-full items-center">
 				<h1 className="text-[18px] tracking-widest mb-1 text-white bg-blur2 px-10 py-1  rounded-full">
 					WE BELIEVE

@@ -298,12 +298,8 @@ html {
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
-	background-image: linear-gradient(
-			0deg,
-			rgba(0, 0, 0, 0.9),
-			rgba(0, 0, 0, 0.9)
-		),
-		url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602158/joel/art4_aiv5yw.jpg');
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, 9), rgba(0, 0, 0, 0.7)),
+		url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651706376/joel/boldness/art13_ldphpd.jpg');
 }
 /* Grid */
 .container {
@@ -326,7 +322,9 @@ html {
 		'img-1 img-2 img-3 img-3'
 		'img-1 img-4 img-5 img-6'
 		'img-7 img-7 img-8 img-6'
-		'img-9 img-10 img-8 img-11';
+		'img-9 img-10 img-8 img-11'
+		'img-9 img-12 img-13 img-13'
+		'img-14 img-14 img-15 img-15';
 }
 .image-gallery div {
 	width: 100%;
@@ -372,49 +370,66 @@ html {
 .img-1 {
 	grid-area: img-1;
 	min-height: 31rem;
-	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602159/joel/art1_xtedux.jpg');
+	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651706377/joel/boldness/art15_sryg2l.jpg');
 }
 .img-2 {
 	grid-area: img-2;
-	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602158/joel/art2_tohkw4.jpg');
+	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651706377/joel/boldness/art12_htv5we.jpg');
 }
 .img-3 {
 	grid-area: img-3;
-	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602159/joel/art3_izhxgw.jpg');
+	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651706377/joel/boldness/art14_prc4yy.jpg');
 }
 .img-4 {
 	grid-area: img-4;
-	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602158/joel/art4_aiv5yw.jpg');
+	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651706376/joel/boldness/art13_ldphpd.jpg');
 }
 .img-5 {
 	grid-area: img-5;
-	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602158/joel/art5_zr7heh.jpg');
+	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602160/joel/boldness/art8_id3zzf.jpg');
 }
 .img-6 {
 	grid-area: img-6;
 	min-height: 31rem;
-	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602158/joel/art6_pcp8lj.jpg');
+	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602160/joel/boldness/art9_ani4wi.jpg');
 }
 .img-7 {
 	grid-area: img-7;
-	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602159/joel/art7_qxhzg5.jpg');
+	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602160/joel/boldness/art11_euh8bu.jpg');
 }
 .img-8 {
 	grid-area: img-8;
 	min-height: 30.8rem;
-	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602160/joel/art8_id3zzf.jpg');
+	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602159/joel/boldness/art10_doltas.jpg');
 }
 .img-9 {
 	grid-area: img-9;
-	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602160/joel/art9_ani4wi.jpg');
+	min-height: 30.8rem;
+	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602159/joel/boldness/art1_xtedux.jpg');
 }
 .img-10 {
 	grid-area: img-10;
-	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602159/joel/art10_doltas.jpg');
+	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602159/joel/boldness/art7_qxhzg5.jpg');
 }
 .img-11 {
 	grid-area: img-11;
-	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602160/joel/art11_euh8bu.jpg');
+	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602159/joel/boldness/art3_izhxgw.jpg');
+}
+.img-12 {
+	grid-area: img-12;
+	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602158/joel/boldness/art5_zr7heh.jpg');
+}
+.img-13 {
+	grid-area: img-13;
+	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602158/joel/boldness/art2_tohkw4.jpg');
+}
+.img-14 {
+	grid-area: img-14;
+	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602158/joel/boldness/art4_aiv5yw.jpg');
+}
+.img-15 {
+	grid-area: img-15;
+	background-image: url('https://res.cloudinary.com/dhdccvkyt/image/upload/v1651602158/joel/boldness/art6_pcp8lj.jpg');
 }
 .slider {
 	position: relative;
@@ -481,7 +496,8 @@ html {
 			'img-4 img-4 img-5 img-5'
 			'img-6 img-7 img-7 img-7'
 			'img-8 img-8 img-9 img-10'
-			'img-11 img-11 img-11 img-10';
+			'img-12 img-11 img-11 img-10'
+			'img-12 img-13 img-14 img-15';
 	}
 	.image-gallery a {
 		height: 10rem;
@@ -505,7 +521,10 @@ html {
 		min-height: 20rem;
 	}
 	.img-10 {
-		min-height: 31rem;
+		min-height: 35.5rem;
+	}
+	.img-12 {
+		min-height: 30.5rem;
 	}
 }
 @media screen and (max-width: 700px) {
@@ -516,7 +535,8 @@ html {
 			'img-4 img-5 img-6 img-6'
 			'img-7 img-5 img-8 img-8'
 			'img-9 img-9 img-10 img-10'
-			'img-11 img-11 img-11 img-11';
+			'img-11 img-11 img-11 img-11'
+			'img-12 img-13 img-14 img-15';
 	}
 	.image-gallery a {
 		height: 10rem;
@@ -551,6 +571,9 @@ html {
 	.img-10 {
 		min-height: 10rem;
 	}
+	.img-12 {
+		min-height: 10rem;
+	}
 }
 @media screen and (max-width: 500px) {
 	.image-gallery {
@@ -565,7 +588,11 @@ html {
 			'img-8 img-8 img-8 img-8'
 			'img-9 img-9 img-9 img-9'
 			'img-10 img-10 img-10 img-10'
-			'img-11 img-11 img-11 img-11';
+			'img-11 img-11 img-11 img-11'
+			'img-12 img-12 img-12 img-12'
+			'img-13 img-13 img-13 img-13'
+			'img-14 img-14 img-14 img-14'
+			'img-15 img-15 img-15 img-15';
 	}
 	.image-gallery a {
 		height: 10rem;

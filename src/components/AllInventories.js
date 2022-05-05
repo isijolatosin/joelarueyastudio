@@ -24,7 +24,7 @@ function AllInventories() {
 			const {
 				data: { products },
 			} = await axios.get('/api/v1/products')
-			setFetchAllData(products.sort((a, b) => a.type.localeCompare(b.type)))
+			setFetchAllData(products.sort((a, b) => a.length.localeCompare(b.type)))
 		} catch (error) {
 			console.log(error)
 		}
@@ -38,84 +38,60 @@ function AllInventories() {
 		setSingleProduct({
 			id: singleProduct.id,
 			name: e.target.value,
-			type: singleProduct.type,
-			color: singleProduct.color,
-			availablecolor: singleProduct.availablecolor,
+			series: singleProduct.series,
 			price: Number(singleProduct.price),
-			length: Number(singleProduct.length),
-			availablelength: singleProduct.availablelength,
+			length: singleProduct.length,
 			description: singleProduct.description,
-			sales: singleProduct.sales,
+			sales: singleProduct.isTrueSales,
+			instock: singleProduct.isTrueInstock,
 		})
 	}
-	const handleInputType = (e) => {
+	const handleInputSeries = (e) => {
 		setSingleProduct({
 			id: singleProduct.id,
 			name: singleProduct.name,
-			type: e.target.value,
-			color: singleProduct.color,
-			availablecolor: singleProduct.availablecolor,
+			series: e.target.value,
 			price: Number(singleProduct.price),
-			length: Number(singleProduct.length),
-			availablelength: singleProduct.availablelength,
+			length: singleProduct.length,
 			description: singleProduct.description,
-			sales: singleProduct.sales,
-		})
-	}
-	const handleInputColor = (e) => {
-		setSingleProduct({
-			id: singleProduct.id,
-			name: singleProduct.name,
-			type: singleProduct.type,
-			color: e.target.value,
-			availablecolor: singleProduct.availablecolor,
-			price: Number(singleProduct.price),
-			length: Number(singleProduct.length),
-			availablelength: singleProduct.availablelength,
-			description: singleProduct.description,
-			sales: singleProduct.sales,
+			sales: singleProduct.isTrueSales,
+			instock: singleProduct.isTrueInstock,
 		})
 	}
 	const handleInputLen = (e) => {
 		setSingleProduct({
 			id: singleProduct.id,
 			name: singleProduct.name,
-			type: singleProduct.type,
-			color: singleProduct.color,
-			availablecolor: singleProduct.availablecolor,
+			series: singleProduct.series,
 			price: Number(singleProduct.price),
 			length: e.target.value,
-			availablelength: singleProduct.availablelength,
 			description: singleProduct.description,
-			sales: singleProduct.sales,
+			sales: singleProduct.isTrueSales,
+			instock: singleProduct.isTrueInstock,
 		})
 	}
 	const handleInputPrice = (e) => {
 		setSingleProduct({
 			id: singleProduct.id,
 			name: singleProduct.name,
-			type: singleProduct.type,
-			color: singleProduct.color,
-			availablecolor: singleProduct.availablecolor,
+			series: singleProduct.series,
 			price: e.target.value,
-			length: Number(singleProduct.length),
-			availablelength: singleProduct.availablelength,
+			length: singleProduct.length,
 			description: singleProduct.description,
-			sales: singleProduct.sales,
+			sales: singleProduct.isTrueSales,
+			instock: singleProduct.isTrueInstock,
 		})
 	}
 	const handleInputDesc = (e) => {
 		setSingleProduct({
 			id: singleProduct.id,
 			name: singleProduct.name,
-			type: singleProduct.type,
-			color: singleProduct.color,
-			availablecolor: singleProduct.availablecolor,
+			series: singleProduct.series,
 			price: Number(singleProduct.price),
-			length: Number(singleProduct.length),
-			availablelength: singleProduct.availablelength,
-			sales: singleProduct.sales,
+			length: singleProduct.length,
 			description: e.target.value,
+			sales: singleProduct.isTrueSales,
+			instock: singleProduct.isTrueInstock,
 		})
 	}
 
@@ -125,16 +101,12 @@ function AllInventories() {
 		try {
 			const product = {
 				name: singleProduct.name,
-				type: singleProduct.type,
-				color: singleProduct.color,
-				availablecolor: singleProduct.availablecolor,
+				series: singleProduct.series,
 				price: singleProduct.price,
 				length: singleProduct.length,
-				availablelength: singleProduct.availablelength,
 				description: singleProduct.description,
 				sales: isTrueSales,
 				instock: isTrueInstock,
-				// image: imageFile,
 			}
 			await axios.patch(`/api/v1/products/${id}`, product)
 			setPostError('')
@@ -186,29 +158,20 @@ function AllInventories() {
 							/>
 							<input
 								type="text"
-								name="type"
-								id="type"
-								value={singleProduct.type}
-								onChange={handleInputType}
-								placeholder="Product Type..."
+								name="title"
+								id="title"
+								value={singleProduct.series}
+								onChange={handleInputSeries}
+								placeholder="Series..."
 								className="mt-1 block lg:w-[50%] mx-auto w-[90%] px-3 py-2 border-none text-sm shadow-xl placeholder-gray-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-200 isabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 outline-0 mb-5 placeholder:font-light placeholder:text-xs text-gray-700 font-light"
 							/>
 							<input
 								type="text"
-								name="color"
-								id="color"
-								value={singleProduct.color}
-								onChange={handleInputColor}
-								placeholder="Product Color..."
-								className="mt-1 block lg:w-[50%] mx-auto w-[90%] px-3 py-2 border-none text-sm shadow-xl placeholder-gray-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-200 isabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 outline-0 mb-5 placeholder:font-light placeholder:text-xs text-gray-700 font-light"
-							/>
-							<input
-								type="number"
-								name="length"
-								id="length"
+								name="dimension"
+								id="dimension"
 								value={singleProduct.length}
 								onChange={handleInputLen}
-								placeholder="Length..."
+								placeholder="Dimension..."
 								className="rounded mt-1 block lg:w-[50%] mx-auto w-[90%] px-3 py-2 border-none text-sm shadow-xl placeholder-gray-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-200 isabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 outline-0 mb-5 placeholder:font-light placeholder:text-xs text-gray-700 font-light"
 							/>
 							<input
@@ -229,19 +192,6 @@ function AllInventories() {
 								placeholder="Description..."
 								className="rounded mt-1 block lg:w-[50%] mx-auto w-[90%] px-3 py-2 border-none text-sm shadow-xl placeholder-gray-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-200 isabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 outline-0 mb-5 placeholder:font-light placeholder:text-xs text-gray-700 font-light"
 							/>
-							{/* <div className="text-red-800 text-sm mb-2 ">
-								<span>
-									Rename Image and substitute space with a dash ( e.g abc-def )
-								</span>
-							</div> */}
-							{/* <div className="rounded flex flex-row items-center shadow-xl pl-3 pb-1">
-								<label className="mr-3 text-gray-500 text-sm">Image</label>
-								<input
-									onChange={uploadFile}
-									type="file"
-									className="block w-full text-sm text-gray-500 file:mr-4 file:py-1 file:px-4 file:rounded file:border-0 file:text-sm file:bg-gray-200 file:text-violet-700 hover:file:bg-violet-100 ease-in duration-300"
-								/>
-							</div> */}
 							<div className="flex">
 								<div className="rounded flex flex-row items-center mt-5 mr-10 shadow-xl p-2">
 									<label className="mr-3 text-gray-500 text-sm">Sales</label>
