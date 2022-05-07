@@ -191,8 +191,8 @@ const Contact = function () {
 								</h1>
 							</div>
 							<div className="mt-10 ">
-								{contactContent.map((item) => (
-									<div className="mb-10">
+								{contactContent.map((item, idx) => (
+									<div key={idx} className="mb-10">
 										<h3 className="text-[18px] border-b-[1px] border-yellow-200 mb-2 text-cyan-900 font-semibold uppercase italic">
 											{item.heading}
 										</h3>

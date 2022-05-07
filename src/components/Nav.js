@@ -78,7 +78,9 @@ const Nav = function () {
 				<div className="flex items-center">
 					<div className="flex items-center">
 						{total > 0 && (
-							<span className="text-xs font-bold -mr-4">${total}</span>
+							<span className="text-xs font-bold -mr-4">
+								${!Number.isInteger(total) ? total : `${total}.00`}
+							</span>
 						)}
 						<Link
 							to={`/checkout/${user?.displayName}`}
@@ -92,7 +94,7 @@ const Nav = function () {
 								<div className="relative">
 									{itemCount < 1 ? <BsHandbag /> : <BsHandbagFill />}
 									{itemCount > 0 && (
-										<div className="absolute bg-blue-900 text-black w-[20px] h-[20px] text-xs -top-4 -right-4 rounded-full flex items-center justify-center">
+										<div className="absolute bg-cyan-900 text-white w-[20px] h-[20px] text-xs -top-4 -right-4 rounded-full flex items-center justify-center">
 											<span>{itemCount}</span>
 										</div>
 									)}

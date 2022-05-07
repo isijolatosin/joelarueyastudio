@@ -2,10 +2,21 @@ import React from 'react'
 import { RiSearch2Fill } from 'react-icons/ri'
 import { RiSearch2Line } from 'react-icons/ri'
 
-const Search = ({ onChange, search, onSearch, data }) => {
+const Search = ({
+	onChange,
+	search,
+	onSearch,
+	data,
+	setIsNotSearch,
+	setSearchData,
+}) => {
+	function Reset() {
+		setIsNotSearch(false)
+		setSearchData([])
+	}
 	return (
 		<form
-			className="w-[80%] lg:w-[40%] mt-10 flex items-center"
+			className="w-[80%] lg:w-[50%] mt-10 flex items-center"
 			onSubmit={onSearch}>
 			<div className="flex rounded-full items-center bg-blur2  h-[30px] w-[100%]">
 				<input
@@ -35,6 +46,13 @@ const Search = ({ onChange, search, onSearch, data }) => {
 					</div>
 				)}
 			</div>
+			{data.length > 0 && (
+				<span
+					onClick={Reset}
+					className="hover:cursor-pointer w-[100px] text-[10px] text-yellow-600 font-light ml-5">
+					Reset All
+				</span>
+			)}
 		</form>
 	)
 }

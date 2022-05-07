@@ -9,7 +9,7 @@ function ShortAbout() {
 		navigate('/about-joelarueyastudio')
 	}
 	return (
-		<div className="relative flex flex-col md:flex-row items-center justify-between w-[70%] h-[550px] md:h-[350px] mx-auto">
+		<div className="relative flex flex-col md:flex-row items-center justify-between w-[70%] h-[550px] md:h-[300px] mx-auto">
 			<p className="w-full md:w-[70%] text-white font-light text-center text-md pt-10 md:pt-20 md:border-r-[1px] md:border-[rgba(255,255,255,0.2)] md:pr-10 h-full">
 				Lorem Ipsum is simply dummy text of the printing and typesetting
 				industry. Lorem Ipsum has been the industry's standard dummy text ever
