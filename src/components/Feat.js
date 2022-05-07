@@ -130,7 +130,10 @@ function Feat() {
 						</div>
 					</div>
 				</div>
-				<div className="w-full mt-20 flex flex-col items-center ease duration-300">
+				<div className="w-full mt-10 flex flex-col items-center">
+					<div className="mb-5">
+						<span className="text-3xl capitalize">{features[index]?.name}</span>
+					</div>
 					<div className="w-[90%] md:w-[80%] mb-[50px]">
 						<div>
 							<img
