@@ -52,7 +52,7 @@ const Login = () => {
 	return (
 		<div>
 			<Helmet>
-				<title>Sign-In</title>
+				<title>Joel Arueya Studio: SIGN-IN-PAGE</title>
 			</Helmet>
 			<Layout>
 				<main className="">

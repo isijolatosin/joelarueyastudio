@@ -17,18 +17,18 @@ const Contact = function () {
 			setTimeout(() => {
 				setDance(
 					products
-						.sort((a, b) => a.length.localeCompare(b.type))
 						.filter((x) => x.series.toLowerCase() === 'dance')
+						.sort((a, b) => a.length.localeCompare(b.length))
 				)
 				setBoldness(
 					products
-						.sort((a, b) => a.length.localeCompare(b.type))
 						.filter((x) => x.series.toLowerCase() === 'boldness')
+						.sort((a, b) => a.length.localeCompare(b.length))
 				)
 				setConsume(
 					products
-						.sort((a, b) => a.length.localeCompare(b.type))
 						.filter((x) => x.series.toLowerCase() === 'consume by motions')
+						.sort((a, b) => a.length.localeCompare(b.length))
 				)
 			}, 2000)
 		} catch (error) {
@@ -41,7 +41,7 @@ const Contact = function () {
 	return (
 		<>
 			<Helmet>
-				<title>Contact</title>
+				<title>Joel Arueya Studio: GALLERY-PAGE</title>
 			</Helmet>
 			<Layout>
 				<div className="relative home">

@@ -78,7 +78,7 @@ const Success = () => {
 	return (
 		<>
 			<Helmet>
-				<title>Success</title>
+				<title>Joel Arueya Studio: SUCCESS-PAGE</title>
 			</Helmet>
 			<Layout>
 				{payload ? (

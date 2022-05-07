@@ -32,7 +32,7 @@ function Management() {
 	return (
 		<>
 			<Helmet>
-				<title>Management Portal</title>
+				<title>Joel Arueya Studio: ADMIN-PAGE</title>
 			</Helmet>
 			<Layout>
 				<div

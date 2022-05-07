@@ -65,7 +65,7 @@ const Contact = function () {
 	return (
 		<>
 			<Helmet>
-				<title>Contact</title>
+				<title>Joel Arueya Studio: CONTACT-PAGE</title>
 			</Helmet>
 			<Layout>
 				<div className="relative md:pt-[300px] pt-[300px] home">

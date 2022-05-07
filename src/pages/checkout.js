@@ -22,7 +22,7 @@ const Checkout = function () {
 	return (
 		<>
 			<Helmet>
-				<title>Checkout</title>
+				<title>Joel Arueya Studio: CHECKOUT-PAGE</title>
 			</Helmet>
 			<div className="flex items-center">
 				<Layout>

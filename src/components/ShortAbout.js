@@ -21,7 +21,7 @@ function ShortAbout() {
 			<div className="h-[50%]">
 				<div className="md:ml-20">
 					<img
-						className="border-[1px] border-white w-[120px] h-[120px] rounded-full object-top "
+						className="border-[1px] border-white w-[120px] h-[120px] object-cover rounded-full object-center "
 						src={joelImg}
 						alt=""
 					/>
