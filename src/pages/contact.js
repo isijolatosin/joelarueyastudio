@@ -161,14 +161,24 @@ const Contact = function () {
 										<span className="mt-5 text-yellow-600 font-light tracking-wide text-sm">
 											Your enquiry has been submitted to joelarueyastudio
 										</span>
-										<span
-											onClick={() => {
-												navigate('/')
-												localStorage.setItem('requestData', '')
-											}}
-											className="font-bold hover:cursor-pointer mx-auto text-[12px] mt-5 text-cyan-900 navStyleChild ">
-											Back to Home Page
-										</span>
+										<div className="flex flex-row w-[70%] mx-auto">
+											<span
+												onClick={() => {
+													navigate('/')
+													localStorage.setItem('requestData', '')
+												}}
+												className="font-bold hover:cursor-pointer mx-auto text-[12px] mt-5 text-cyan-900 navStyleChild ">
+												Back to Home
+											</span>
+											<span
+												onClick={() => {
+													navigate('/art-gallery/:joelarueyastudio')
+													localStorage.setItem('requestData', '')
+												}}
+												className="font-bold hover:cursor-pointer mx-auto text-[12px] mt-5 text-cyan-900 navStyleChild ">
+												Back to Gallery
+											</span>
+										</div>
 									</div>
 								)}
 							</div>
