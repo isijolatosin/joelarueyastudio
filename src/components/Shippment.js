@@ -158,7 +158,6 @@ function Shippment() {
 	return (
 		<div className="flex flex-col items-center my-5">
 			<Heading>Shipment</Heading>
-			{/* {user?.email === AUTHORIZED_ID.id_one || AUTHORIZED_ID.id_two ? ( */}
 			<div>
 				{trackingInput && (
 					<div className="mt-10 w-full">
@@ -200,9 +199,13 @@ function Shippment() {
 					{shippingInfo?.shippingHeader?.length === 0 &&
 					shippingInfo?.shippingHeader?.length === 0 ? (
 						isLoading ? (
-							<span>Please hold, fetching joelarueyastudio data...</span>
+							<span className="text-center text-sm w-[350px]">
+								Please hold, fetching joelarueyastudio data...
+							</span>
 						) : (
-							<span>Data not Found</span>
+							<span className="text-center text-red-800 yexy-sm">
+								Data not Found
+							</span>
 						)
 					) : (
 						<>
