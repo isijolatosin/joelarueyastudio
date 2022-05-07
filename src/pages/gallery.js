@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { useNavigate } from 'react-router-dom'
 import Search from '../components/Search'
 import Layout from '../components/shared/Layout'
 
@@ -8,6 +9,7 @@ const Contact = function () {
 	const [dance, setDance] = React.useState([])
 	const [boldness, setBoldness] = React.useState([])
 	const [consume, setConsume] = React.useState([])
+	const navigate = useNavigate()
 	async function fetchProducts() {
 		try {
 			const {
@@ -38,6 +40,12 @@ const Contact = function () {
 	React.useEffect(() => {
 		fetchProducts()
 	}, [])
+
+	const handleRequest = (values) => {
+		localStorage.setItem('requestData', JSON.stringify(values))
+		navigate('/contact-joelarueyastudio')
+	}
+
 	return (
 		<>
 			<Helmet>
@@ -84,7 +92,9 @@ const Contact = function () {
 														</p>
 													</div>
 													<div className="w-full h-[35%]">
-														<button className="w-[50%] h-full bg-orange-300 hover:bg-orange-600 text-white border-r-[1px] border-white ease duration-300">
+														<button
+															onClick={() => handleRequest(d)}
+															className="w-[50%] h-full bg-orange-300 hover:bg-orange-600 text-white border-r-[1px] border-white ease duration-300">
 															Request customize
 														</button>
 														<button className="w-[50%] bg-gray-400 hover:bg-gray-600 text-white h-full ease duration-300">

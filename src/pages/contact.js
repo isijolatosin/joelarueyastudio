@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/shared/Layout'
 import { AiFillPhone } from 'react-icons/ai'
@@ -6,14 +6,23 @@ import { MdEmail } from 'react-icons/md'
 import { ImLocation } from 'react-icons/im'
 import { RiTimeFill } from 'react-icons/ri'
 import { BsFillCalendar2EventFill } from 'react-icons/bs'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { UserContext } from '../context/user-context'
 
 const Contact = function () {
+	const navigate = useNavigate()
+	const [requestData, setRequesteData] = React.useState(
+		localStorage.getItem('requestData')
+			? JSON.parse(localStorage.getItem('requestData'))
+			: []
+	)
+	const [showResponse, setShowResponse] = React.useState(false)
+	const { user } = useContext(UserContext)
 	const [contactInput, setcontactInput] = React.useState({
-		name: '',
-		email: '',
-		subject: '',
-		message: '',
+		name: user?.displayName ? user?.displayName : '',
+		email: user?.email ? user?.email : '',
+		subject: requestData?.description ? requestData?.description : '',
+		message: requestData?.image ? requestData?.image : '',
 		error: null,
 	})
 
@@ -48,7 +57,7 @@ const Contact = function () {
 		e.preventDefault()
 		try {
 			window.open(
-				`mailto:'pvginternationals@gmail.com'?subject=${contactInput.subject}&body=${contactInput.name}: ${contactInput.message}. My email is ${contactInput.email}`
+				`mailto:joelarueya@gmail.com?subject=${contactInput.subject}&body=${contactInput.name}: ${contactInput.message}. My email is ${contactInput.email}`
 			)
 			setcontactInput({
 				name: '',
@@ -61,6 +70,9 @@ const Contact = function () {
 			console.log(error)
 			setcontactInput({ ...contactInput, error: error.message })
 		}
+		setRequesteData([])
+		setShowResponse(true)
+		// localStorage.setItem('requestData', '')
 	}
 	return (
 		<>
@@ -90,7 +102,7 @@ const Contact = function () {
 								you our customers and we are committed to long time support. We
 								respond within 24-48 business hours Monday - Friday.
 							</p>
-							<div className="md:w-[90%] lg:w-[70%] 2xl:w-[50%] mx-auto flex flex-col items-center">
+							<div className="w-[90%] md:w-[90%] lg:w-[70%] 2xl:w-[50%] mx-auto flex flex-col items-center">
 								<input
 									type="text"
 									name="name"
@@ -120,7 +132,7 @@ const Contact = function () {
 								/>
 								<textarea
 									id="message"
-									rows="4"
+									rows="10"
 									cols="50"
 									name="message"
 									value={contactInput.message}
@@ -144,6 +156,21 @@ const Contact = function () {
 									type="submit">
 									submit
 								</button>
+								{showResponse && (
+									<div className="flex flex-col text-center">
+										<span className="mt-5 text-yellow-600 font-light tracking-wide text-sm">
+											Your enquiry has been submitted to joelarueyastudio
+										</span>
+										<span
+											onClick={() => {
+												navigate('/')
+												localStorage.setItem('requestData', '')
+											}}
+											className="font-bold hover:cursor-pointer mx-auto text-[12px] mt-5 text-cyan-900 navStyleChild ">
+											Back to Home Page
+										</span>
+									</div>
+								)}
 							</div>
 						</form>
 						<div className="md:ml-10 w-full my-5 border-[5px] pl-10 rounded-[100px] border-l-0 p-5 border-cyan-900">
