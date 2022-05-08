@@ -58,7 +58,7 @@ const Nav = function () {
 
 	return (
 		<div>
-			<div className="flex items-center justify-between shadow-lg px-5 pb-2 fixed z-40 w-full pt-4 md:w-[85%] mt-[-55px] md:mt-[-10px] md:h-[50px] bg-white">
+			<div className="flex items-center justify-between shadow-lg px-5 pb-2 fixed z-40 w-full pt-4 md:w-[85%] mt-[-55px] md:mt-[-10px] md:h-[50px] bg-blur">
 				<Logo />
 				<div className="hidden md:inline navStyle">
 					{navLinks.map((nav) => (
@@ -66,8 +66,8 @@ const Nav = function () {
 							onClick={() => setActive(nav.navName)}
 							className={`mx-3 ${
 								active === nav.navName
-									? 'text-blue-900 font-bold'
-									: 'text-gray-400'
+									? 'text-cyan-900 font-bold'
+									: 'text-gray-700'
 							} hover:text-gray-400 uppercase ease duration-300 text-[11px] navStyleChild`}
 							key={nav.id}
 							to={nav.link}>
@@ -102,7 +102,7 @@ const Nav = function () {
 							</div>
 						</Link>
 					</div>
-					<div className="text-xs text-blue-900 ml-5">
+					<div className="text-xs text-cyan-900 ml-5">
 						{!user ? (
 							<span
 								className="hover:cursor-pointer navStyleChild"

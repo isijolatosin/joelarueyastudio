@@ -56,7 +56,8 @@ const Contact = function () {
 		setSearch(e.target.value)
 	}
 
-	const onSearch = () => {
+	const onSearch = (e) => {
+		e.preventDefault()
 		const filter = allProd.filter((d) =>
 			d?.name.toLowerCase().includes(search.toLowerCase())
 		)
@@ -74,7 +75,7 @@ const Contact = function () {
 			</Helmet>
 			<Layout>
 				<div className="relative home">
-					<div className="flex py-10 mb-10 md:mb-[50px] justify-center md:mt-7 md:pt-20">
+					<div className="flex py-10 mb-10 md:mb-[50px] justify-center md:pt-20">
 						<Search
 							search={search}
 							onChange={handleChange}

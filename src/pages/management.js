@@ -35,8 +35,7 @@ function Management() {
 				<title>Joel Arueya Studio: ADMIN-PAGE</title>
 			</Helmet>
 			<Layout>
-				<div
-					className={'pt-5 flex flex-col w-[100%] items-center md:mt-[50px]'}>
+				<div className="pt-10 md:pt-20 flex flex-col w-[100%] items-center">
 					<Heading>Management portal</Heading>
 					<div className="my-5 w-[90%] text-cyan-900 font-bold">
 						<ul className="flex text-xs flex-row items-center justify-between w-[100%] lg:w-[50%] mx-auto">
