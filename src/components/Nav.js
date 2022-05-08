@@ -120,7 +120,7 @@ const Nav = function () {
 					</div>
 				</div>
 			</div>
-			<div className="md:hidden w-[100%] mx-auto flex mt-5 pt-5 justify-between">
+			<div className="md:hidden w-[100%] mx-auto flex mt-5 pt-12 justify-between">
 				{navLinks.map((nav) => (
 					<Link
 						onClick={() => setActive(nav.navName)}
