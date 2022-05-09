@@ -60,14 +60,14 @@ const Register = () => {
 				<title>Joel Arueya Studio: SIGN-UP-PAGE</title>
 			</Helmet>
 			<Layout>
-				<section className="flex flex-col items-center mt-[150px] lg:mt-[100px]">
-					<div className="text-center">
+				<section className="flex flex-col items-center mt-[150px] lg:mt-[0px]">
+					<div className="text-center md:pt-[100px]">
 						<h1 className="text-2xl font-bold">Sign Up</h1>
 						<p className="w-[55%] mx-auto my-10">
 							By creating account with us, you consent to receiving newsletters
 							or promotions from{' '}
 							<Link to="/">
-								<span className="text-rose-800">PVG International S.</span>
+								<span className="text-rose-800">joelarueyastudio</span>
 							</Link>
 						</p>
 					</div>

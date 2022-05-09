@@ -56,8 +56,8 @@ const Login = () => {
 			</Helmet>
 			<Layout>
 				<main className="">
-					<section className="flex flex-col items-center mt-[150px] lg:mt-[100px]">
-						<div className="text-center">
+					<section className="flex flex-col items-center mt-[150px] lg:mt-[0px]">
+						<div className="text-center md:pt-[100px]">
 							<h1 className="text-2xl font-bold mb-10">Sign In</h1>
 							{/* <p className="w-[55%] mx-auto my-10">
 								Fill in your login credentials to gain access to your personal
