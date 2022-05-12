@@ -59,7 +59,7 @@ const Buy = () => {
 								src={data?.image}
 								alt={data?.name}
 							/>
-							<div className="flex-[0.5] bg-neutral-300 w-full p-10 font-light">
+							<div className="flex-[0.5] bg-neutral-50 w-full p-10 font-light">
 								<h1 className="text-4xl font-bold w-[100%] md:w-[70%]">
 									{data?.name}
 								</h1>
