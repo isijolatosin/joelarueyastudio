@@ -82,7 +82,7 @@ const Contact = function () {
 			<div className=" home">
 				<Layout>
 					<div className="relative md:pt-[300px] pt-[300px]">
-						<h1 className="scaleInfinite text-white ml-[60px] md:ml-0 absolute top-24 text-3xl italic md:left-[38%]">
+						<h1 className="scaleInfinite text-white ml-[60px] md:ml-0 absolute top-24 text-3xl italic md:left-[42%]">
 							CONNECT <span className="text-xl">with</span>{' '}
 							<span className="text-cyan-900 font-bold">JOEL</span>
 						</h1>
@@ -92,9 +92,7 @@ const Contact = function () {
 								className="shadow-xl shadow-white mt-[-70px] w-full flex flex-col items-center md:max-w-[50%] bg-blur py-5 mb-5">
 								<span className="text-[10px] font-light mb-2">
 									Contact -{' '}
-									<Link
-										to="/"
-										className="text-yellow-600 text-sm navStyleChild">
+									<Link to="/" className="text-cyan-900 text-sm navStyleChild">
 										JOELARUEYASTUDIO
 									</Link>
 								</span>
@@ -105,6 +103,12 @@ const Contact = function () {
 									value you our customers and we are committed to long time
 									support. We respond within 24-48 business hours Monday -
 									Friday.
+									<br />
+									<br />
+									<span className="text-cyan-900 italic text-xs border-l-[10px] border-yellow-500 pl-1">
+										Tell us what your design preferences are and we will brush
+										it to life...
+									</span>
 								</p>
 								<div className="w-[90%] md:w-[90%] lg:w-[70%] 2xl:w-[50%] mx-auto flex flex-col items-center">
 									<input
@@ -158,7 +162,7 @@ const Contact = function () {
 										}
 										className="bg-neutral-600 w-[70%] text-white py-2 text-sm font-light tracking-wide"
 										type="submit">
-										submit
+										Send inquiry
 									</button>
 									{showResponse && (
 										<div className="flex flex-col text-center">

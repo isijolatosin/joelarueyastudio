@@ -10,6 +10,7 @@ import Login from './pages/login'
 import Register from './pages/register'
 import Canceled from './pages/canceled'
 import Success from './pages/success'
+import Buy from './pages/buy'
 
 function App() {
 	return (
@@ -25,9 +26,9 @@ function App() {
 			<Route exact path="/success" element={<Success />} />
 			<Route exact path="/canceled" element={<Canceled />} />
 			<Route exact path="/management" element={<Management />} />
+			<Route exact path="/purchasing/:product" element={<Buy />} />
 			<Route exact path="/sign-in" element={<Login />} />
 			<Route exact path="/sign-up" element={<Register />} />
-			<Route exact path="/product/:productId" element={<Home />} />
 			<Route exact path="*" element={<NotFound />} />
 			<Route exact path="/" element={<Home />} />
 		</Routes>

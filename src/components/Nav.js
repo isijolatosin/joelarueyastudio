@@ -62,7 +62,7 @@ const Nav = function () {
 		<div>
 			<div className="flex items-center justify-between shadow-2xl px-5 pb-2 z-40 w-full pt-16 md:pt-10 md:w-[100%] mt-[-55px] md:mt-[-10px] md:h-[70px]">
 				<Logo />
-				<div className="hidden md:inline navStyle">
+				<div className="hidden md:flex md:flex-row md:justify-between md:w-[50%] navStyle">
 					{navLinks.map((nav) => (
 						<Link
 							onClick={() => setActive(nav.navName)}
@@ -152,24 +152,6 @@ const Nav = function () {
 					</Link>
 				))}
 			</div>
-			{/* <div className="md:hidden w-[100%] mx-auto flex mt-10 pb-4 pt-8 justify-between">
-				{navLinks.map((nav) => (
-					<Link
-						onClick={() => setActive(nav.navName)}
-						className={`mx-3 ${
-							active === nav.navName
-								? 'text-blue-900 font-bold scaleInfiniteNav'
-								: 'text-gray-400'
-						} hover:text-gray-400 px-3 uppercase ease duration-300 text-[8.8px]`}
-						key={nav.id}
-						to={nav.link}>
-						{nav.navName === 'home' && 'home'}
-						{nav.navName === 'about-joelarueyastudio' && 'about'}
-						{nav.navName === 'contact-joelarueyastudio' && 'contact'}
-						{nav.navName === 'art-gallery' && 'gallery'}
-					</Link>
-				))}
-			</div> */}
 		</div>
 	)
 }

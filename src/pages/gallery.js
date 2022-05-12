@@ -51,6 +51,11 @@ const Contact = function () {
 		localStorage.setItem('requestData', JSON.stringify(values))
 		navigate('/contact-joelarueyastudio')
 	}
+	const handlePurchase = (values) => {
+		localStorage.setItem('purchaseData', JSON.stringify(values))
+		const ext = `${values.name}${values.length.split('/').join(' ')}`
+		navigate(`/purchasing/${ext}`)
+	}
 
 	const handleChange = (e) => {
 		setSearch(e.target.value)
@@ -117,8 +122,10 @@ const Contact = function () {
 													className="w-[50%] h-full bg-orange-300 hover:bg-orange-600 text-white border-r-[1px] border-white ease duration-300">
 													Request customize
 												</button>
-												<button className="w-[50%] bg-gray-400 hover:bg-gray-600 text-white h-full ease duration-300">
-													Add to cart
+												<button
+													onClick={() => handlePurchase(search)}
+													className="w-[50%] bg-gray-400 hover:bg-gray-600 text-white h-full ease duration-300">
+													Buy now
 												</button>
 											</div>
 										</div>
@@ -173,8 +180,10 @@ const Contact = function () {
 																		className="w-[50%] h-full bg-orange-300 hover:bg-orange-600 text-white border-r-[1px] border-white ease duration-300">
 																		Request customize
 																	</button>
-																	<button className="w-[50%] bg-gray-400 hover:bg-gray-600 text-white h-full ease duration-300">
-																		Add to cart
+																	<button
+																		onClick={() => handlePurchase(d)}
+																		className="w-[50%] bg-gray-400 hover:bg-gray-600 text-white h-full ease duration-300">
+																		Buy now
 																	</button>
 																</div>
 															</div>
@@ -218,8 +227,10 @@ const Contact = function () {
 																		className="w-[50%] h-full bg-orange-300 hover:bg-orange-600 text-white border-r-[1px] border-white ease duration-300">
 																		Request customize
 																	</button>
-																	<button className="w-[50%] bg-gray-400 hover:bg-gray-600 text-white h-full ease duration-300">
-																		Add to cart
+																	<button
+																		onClick={() => handlePurchase(b)}
+																		className="w-[50%] bg-gray-400 hover:bg-gray-600 text-white h-full ease duration-300">
+																		Buy now
 																	</button>
 																</div>
 															</div>
@@ -231,7 +242,7 @@ const Contact = function () {
 									</div>
 								)}
 								{!isNotSearch && consume.length !== 0 && (
-									<div className="mt-40 mb-10 shadow-lg bg-white pt-10 ">
+									<div className="mt-40 pb-10 shadow-lg bg-white pt-10 ">
 										<h1 className="pl-5 text-xl font-bold">
 											CONSUME BY MOTION SERIES
 										</h1>
@@ -265,8 +276,10 @@ const Contact = function () {
 																className="w-[50%] h-full bg-orange-300 hover:bg-orange-600 text-white border-r-[1px] border-white ease duration-300">
 																Request customize
 															</button>
-															<button className="w-[50%] bg-gray-400 hover:bg-gray-600 text-white h-full ease duration-300">
-																Add to cart
+															<button
+																onClick={() => handlePurchase(c)}
+																className="w-[50%] bg-gray-400 hover:bg-gray-600 text-white h-full ease duration-300">
+																Buy now
 															</button>
 														</div>
 													</div>
