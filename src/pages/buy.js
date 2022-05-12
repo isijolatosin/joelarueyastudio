@@ -85,7 +85,10 @@ const Buy = () => {
 									className="w-[100%] md:w-[70%] bg-gray-400 hover:bg-gray-600 text-white h-[50px] ease duration-300">
 									Add to cart
 								</button>
-								<div className="flex flex-row mt-10 w-[100%] flex-wrap justify-center md:justify-start">
+								<p className="mt-10 text-cyan-900 font-bold">
+									Related Art Work
+								</p>
+								<div className="flex flex-row mt-1 w-[100%] flex-wrap justify-center md:justify-start">
 									{similarData.map((dt) => (
 										<img
 											className="w-[70px] h-[70px] object-cover rounded-lg m-2"
