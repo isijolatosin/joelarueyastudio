@@ -77,7 +77,7 @@ function Feat() {
 
 	return (
 		<div className="relative flex flex-col items-center w-full">
-			<div className="flex flex-col w-full items-center bg-[rgba(255,255,255,1)] py-20 md:pt-32">
+			<div className="flex flex-col w-full items-center bg-[rgba(255,255,255,1)] pb-10 pt-5 mt-10 md:pt-32">
 				<h1 className="text-gray-700 text-lg md:text-2xl font-bold mb-7">
 					FEATURED ART WORKS
 				</h1>
