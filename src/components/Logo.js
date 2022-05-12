@@ -10,8 +10,8 @@ const Logo = function () {
 	return (
 		<div className="flex items-center justify center">
 			<Link to="/" className="flex items-center">
-				<FaArtstation className="text-neutral-900 mr-2 w-[30px] h-[30px]" />
-				<span className="text-cyan-900 font-normal navStyleChild">
+				<FaArtstation className="text-neutral-50 mr-2 w-[30px] h-[30px]" />
+				<span className="text-gray-50 font-light navStyleChild">
 					Joelarueyastudio
 				</span>
 			</Link>

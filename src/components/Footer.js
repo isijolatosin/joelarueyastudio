@@ -3,7 +3,7 @@ import { FiLinkedin, FiFacebook, FiInstagram } from 'react-icons/fi'
 
 function Footer() {
 	return (
-		<footer className="flex bg-neutral-200 flex-col py-5 justify-center items-center rounded-b-[30px] lg:rounded-lg border-neutral-700">
+		<footer className="flex bg-neutral-200 pb-[50px] flex-col py-5 justify-center items-center border-neutral-700">
 			<div className="flex text-xs text-neutral-500 font-light">
 				<div className="pr-5 border-r-2 border-r-neutral-800 md:flex">
 					<p className="">

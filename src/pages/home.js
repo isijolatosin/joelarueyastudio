@@ -12,13 +12,15 @@ const Home = function () {
 				<title>Joel Arueya Studio</title>
 			</Helmet>
 
-			<Layout>
-				<div className="home">
-					<Banner />
-					<ShortAbout />
+			<div className="home">
+				<Layout>
+					<div className="h-[85vh]">
+						<Banner />
+						<ShortAbout />
+					</div>
 					<Feat />
-				</div>
-			</Layout>
+				</Layout>
+			</div>
 		</>
 	)
 }

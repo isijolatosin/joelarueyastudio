@@ -9,8 +9,8 @@ function ShortAbout() {
 		navigate('/about-joelarueyastudio')
 	}
 	return (
-		<div className="relative flex flex-col md:flex-row items-center justify-between w-[70%] h-[550px] md:h-[300px] mx-auto">
-			<p className="w-full md:w-[70%] text-white font-light text-center text-md pt-10 md:pt-20 md:border-r-[1px] md:border-[rgba(255,255,255,0.2)] md:pr-10 h-full">
+		<div className="relative scaleInfinite mb-10 md:mt-[200px] rounded-xl bg-blur2 flex flex-col md:flex-row items-center justify-between w-[70%] h-[550px] md:h-[250px] mx-auto">
+			<p className=" h-[200px] px-5 w-full md:w-[70%] text-white font-light text-left text-md pt-10 md:border-r-[1px] md:border-[rgba(255,255,255,0.2)] md:pr-10">
 				Lorem Ipsum is simply dummy text of the printing and typesetting
 				industry. Lorem Ipsum has been the industry's standard dummy text ever
 				since the 1500s, when an unknown printer took a galley of type and
@@ -19,15 +19,15 @@ function ShortAbout() {
 				essentially unchanged.
 			</p>
 			<div className="h-[50%]">
-				<div className="md:ml-20">
+				<div className="mt-20 md:mt-0 md:mx-20 ">
 					<img
 						className="border-[1px] border-white w-[120px] h-[120px] object-cover rounded-full object-center "
 						src={joelImg}
 						alt=""
 					/>
 				</div>
-				<div className="hover:opacity-[0.5] absolute bottom-[40px] md:bottom-[120px] right-[170px] md:right-[100px] w-[80px] h-[30px] bg-cyan-900 opacity-[0.7] rounded-bl-xl"></div>
-				<div className="absolute bottom-[10px] md:bottom-[90px] right-[150px] md:right-[80px] mb-10">
+				<div className="hover:opacity-[0.5] absolute bottom-[60px] md:bottom-[80px] right-[170px] md:right-[180px] w-[80px] h-[30px] bg-cyan-900 opacity-[0.7] rounded-bl-xl"></div>
+				<div className="absolute bottom-[30px] md:bottom-[50px] right-[150px] md:right-[160px] mb-10">
 					<Button handleFunc={handleFunc} type="medium">
 						Meet rue
 					</Button>

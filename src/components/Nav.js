@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Logo from '../components/Logo'
 import { BsHandbagFill } from 'react-icons/bs'
+import { CgMenuRight } from 'react-icons/cg'
 import { BsHandbag } from 'react-icons/bs'
 import { selectItemCount, selectTotal } from '../slices/appSlices'
 import { useSelector } from 'react-redux'
@@ -10,6 +11,7 @@ import { UserContext } from '../context/user-context'
 
 const Nav = function () {
 	const { user } = useContext(UserContext)
+	const [menu, setMenu] = React.useState(false)
 	const [active, setActive] = React.useState('')
 	const itemCount = useSelector(selectItemCount)
 	const total = useSelector(selectTotal)
@@ -58,7 +60,7 @@ const Nav = function () {
 
 	return (
 		<div>
-			<div className="flex items-center justify-between shadow-lg px-5 pb-2 fixed z-40 w-full pt-4 md:w-[85%] mt-[-55px] md:mt-[-10px] md:h-[50px] bg-blur">
+			<div className="flex items-center justify-between shadow-2xl px-5 pb-2 z-40 w-full pt-16 md:pt-10 md:w-[100%] mt-[-55px] md:mt-[-10px] md:h-[70px]">
 				<Logo />
 				<div className="hidden md:inline navStyle">
 					{navLinks.map((nav) => (
@@ -66,8 +68,8 @@ const Nav = function () {
 							onClick={() => setActive(nav.navName)}
 							className={`mx-3 ${
 								active === nav.navName
-									? 'text-cyan-900 font-bold'
-									: 'text-gray-700'
+									? 'text-yellow-500 font-bold'
+									: 'text-gray-50'
 							} hover:text-gray-400 uppercase ease duration-300 text-[11px] navStyleChild`}
 							key={nav.id}
 							to={nav.link}>
@@ -92,7 +94,11 @@ const Nav = function () {
 										: 'ml-5'
 								}>
 								<div className="relative">
-									{itemCount < 1 ? <BsHandbag /> : <BsHandbagFill />}
+									{itemCount < 1 ? (
+										<BsHandbag className="text-gray-50" />
+									) : (
+										<BsHandbagFill className="text-gray-50" />
+									)}
 									{itemCount > 0 && (
 										<div className="absolute bg-cyan-900 text-white w-[20px] h-[20px] text-xs -top-4 -right-4 rounded-full flex items-center justify-center">
 											<span>{itemCount}</span>
@@ -102,7 +108,12 @@ const Nav = function () {
 							</div>
 						</Link>
 					</div>
-					<div className="text-xs text-cyan-900 ml-5">
+					<div
+						onClick={() => setMenu(!menu)}
+						className="md:hidden ml-5 text-gray-50 text-xl">
+						<CgMenuRight />
+					</div>
+					<div className="text-xs text-gray-50 ml-5">
 						{!user ? (
 							<span
 								className="hover:cursor-pointer navStyleChild"
@@ -120,13 +131,34 @@ const Nav = function () {
 					</div>
 				</div>
 			</div>
-			<div className="md:hidden w-[100%] mx-auto flex mt-5 pt-5 justify-between">
+			<div
+				className={`${
+					menu ? 'plumpMenuClick' : 'plumpMenu'
+				} plumpMenu md:hidden bg-blur2 z-40`}>
+				{navLinks.map((nav) => (
+					<Link
+						onClick={() => setActive(nav.navName)}
+						className={`mx-3 text-[14px] mb-7 p-1 ${
+							active === nav.navName
+								? 'text-yellow-500 font-bold'
+								: 'text-neutral-700'
+						} hover:text-gray-400 px-3 uppercase ease duration-300`}
+						key={nav.id}
+						to={nav.link}>
+						{nav.navName === 'home' && 'home'}
+						{nav.navName === 'about-joelarueyastudio' && 'about'}
+						{nav.navName === 'contact-joelarueyastudio' && 'contact'}
+						{nav.navName === 'art-gallery' && 'gallery'}
+					</Link>
+				))}
+			</div>
+			{/* <div className="md:hidden w-[100%] mx-auto flex mt-10 pb-4 pt-8 justify-between">
 				{navLinks.map((nav) => (
 					<Link
 						onClick={() => setActive(nav.navName)}
 						className={`mx-3 ${
 							active === nav.navName
-								? 'text-blue-900 font-bold'
+								? 'text-blue-900 font-bold scaleInfiniteNav'
 								: 'text-gray-400'
 						} hover:text-gray-400 px-3 uppercase ease duration-300 text-[8.8px]`}
 						key={nav.id}
@@ -137,7 +169,7 @@ const Nav = function () {
 						{nav.navName === 'art-gallery' && 'gallery'}
 					</Link>
 				))}
-			</div>
+			</div> */}
 		</div>
 	)
 }
