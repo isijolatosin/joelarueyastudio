@@ -19,15 +19,15 @@ function ShortAbout() {
 				essentially unchanged.
 			</p>
 			<div className="h-[50%]">
-				<div className="mt-20 md:mt-0 md:mx-20 ">
+				<div className="mt-5 md:mt-0 md:mx-20 ">
 					<img
 						className="border-[1px] border-white w-[120px] h-[120px] object-cover rounded-full object-center "
 						src={joelImg}
 						alt=""
 					/>
 				</div>
-				<div className="hover:opacity-[0.5] absolute bottom-[60px] md:bottom-[80px] right-[170px] md:right-[180px] w-[80px] h-[30px] bg-cyan-900 opacity-[0.7] rounded-bl-xl"></div>
-				<div className="absolute bottom-[30px] md:bottom-[50px] right-[150px] md:right-[160px] mb-10">
+				<div className="hover:opacity-[0.5] absolute bottom-[110px] md:bottom-[80px] right-[170px] md:right-[180px] w-[80px] h-[30px] bg-cyan-900 opacity-[0.7] rounded-bl-xl"></div>
+				<div className="absolute bottom-[75px] md:bottom-[50px] right-[150px] md:right-[160px] mb-10">
 					<Button handleFunc={handleFunc} type="medium">
 						Meet rue
 					</Button>
