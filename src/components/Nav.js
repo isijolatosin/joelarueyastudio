@@ -141,7 +141,7 @@ const Nav = function () {
 						className={`mx-3 text-[14px] mb-7 p-1 ${
 							active === nav.navName
 								? 'text-yellow-500 font-bold'
-								: 'text-neutral-700'
+								: 'text-neutral-300'
 						} hover:text-gray-400 px-3 uppercase ease duration-300`}
 						key={nav.id}
 						to={nav.link}>
