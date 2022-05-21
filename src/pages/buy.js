@@ -102,7 +102,7 @@ const Buy = () => {
 						</div>
 					) : (
 						<div>
-							<div className="load-wrapper mt-[-350px]">
+							<div className="load-wrapper mt-[-300px]">
 								<div className="circle"></div>
 								<div className="circle"></div>
 								<div className="circle"></div>
