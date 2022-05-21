@@ -10,13 +10,16 @@ function ShortAbout() {
 	}
 	return (
 		<div className="relative scaleInfinite mb-10 md:mt-[200px] rounded-xl bg-blur2 flex flex-col md:flex-row items-center justify-between w-[90%] md:w-[70%] h-[550px] md:h-[250px] mx-auto">
-			<p className=" h-[200px] px-5 w-full md:w-[70%] text-white font-light text-left text-md pt-10 md:border-r-[1px] md:border-[rgba(255,255,255,0.2)] md:pr-10">
-				Lorem Ipsum is simply dummy text of the printing and typesetting
-				industry. Lorem Ipsum has been the industry's standard dummy text ever
-				since the 1500s, when an unknown printer took a galley of type and
-				scrambled it to make a type specimen book. It has survived not only five
-				centuries, but also the leap into electronic typesetting, remaining
-				essentially unchanged.
+			<p className=" h-[200px] px-5 w-full md:w-[70%] text-white font-light text-left text-md pt-2 md:border-r-[1px] md:border-[rgba(255,255,255,0.2)] md:pr-10">
+				Arueya Joel graduated from the Auchi Polytechnic, Edo State Nigeria with
+				a Higher National Diploma in Fine Art (Painting). Joel has held a solo
+				exhibition supported by Guaranty Trust Bank, Nigeria. He has also
+				participated in several group exhibitions and art auctions at Marvel's
+				Attic Art Auction, United Kingdom, SOGAL Art Auction and TKMG, Nigeria.
+				He participated in Kunst Asyl” art residence in Quedlinburg / Germany
+				His work was the subject of a sterling bank advert to promote culture
+				and creativity in Nigeria. His work can be found in many significant
+				homes both in Nigeria and abroad.
 			</p>
 			<div className="h-[50%]">
 				<div className="mt-5 md:mt-0 md:mx-20 ">

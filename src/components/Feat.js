@@ -74,6 +74,17 @@ function Feat() {
 		{ item: boldness.slice(0, 3), id: 2, name: 'boldness' },
 		{ item: consume.slice(0, 3), id: 3, name: 'consume' },
 	]
+	const description = [
+		{
+			text: "Dance is one of the way of express one's self, Dance, the art of precise, expressive, and graceful human movement, traditionally, but not necessarily, performed in accord with musical accompaniment. Dancing developed as a natural expression of united feeling and action.",
+		},
+		{
+			text: 'Dance, the art of precise, expressive, and graceful human movement, traditionally, but not necessarily, performed in accord with musical accompaniment. Dancing developed as a natural expression of united feeling and action.',
+		},
+		{
+			text: 'Dancing developed as a natural expression of united feeling and action.',
+		},
+	]
 
 	return (
 		<div className="relative flex flex-col items-center w-full">
@@ -130,80 +141,36 @@ function Feat() {
 						</div>
 					</div>
 				</div>
-				<div className="w-full mt-10 flex flex-col items-center">
+				<div className="mt-10 w-[90%] md:w-[80%] h-[90%] md:h-[700px] flex flex-col items-center">
 					<div className="mb-5">
 						<span className="text-3xl capitalize">{features[index]?.name}</span>
 					</div>
-					<div className="w-[90%] md:w-[80%] mb-[50px]">
+					<div className="mb-10">
 						<div>
 							<img
 								src={features[index].item[0]?.image}
 								alt={features[index].item[0]?.name}
-								className="w-[400px] h-[300px] float-left aspect-[1/1] lg:aspect-[1/2] shadow-lg object-cover object-center mb-0 mr-3 [clip-path:var(--my-shape)] [shape-outside:var(--my-shape)] lg:[--my-shape:polygon(0%_0%,100%_0%,75%_100%,0%_100%)]"
+								className="w-[600px] h-[300px] float-left aspect-[1/1] lg:aspect-[1/2] shadow-lg object-cover object-center mb-5 md:mb-0 mr-14 [clip-path:var(--my-shape)] [shape-outside:var(--my-shape)] lg:[--my-shape:polygon(0%_0%,100%_0%,75%_100%,0%_100%)]"
 							/>
-							<span className="w-[50%]">
-								There are many variations of passages of Lorem Ipsum available,
-								but the majority have suffered alteration in some form, by
-								injected humour, or randomised words which don't look even
-								slightly believable. If you are going to use a passage of Lorem
-								Ipsum, you need to be sure there isn't anything embarrassing
-								hidden in the middle of text. All the Lorem Ipsum generators on
-								the Internet tend to repeat predefined chunks as necessary,
-								making this the first true generator on the Internet. It uses a
-								dictionary of over 200 Latin words, combined with a handful of
-								model sentence structures, to generate Lorem Ipsum which looks
-								reasonable. The generated Lorem Ipsum is therefore always free
-								from repetition, injected humour, or non-characteristic words
-								etc.
-							</span>
+							<span className="w-[20%]">{description[index].text}</span>
 						</div>
 					</div>
-					<div className="w-[90%] md:w-[80%] mb-[50px]">
+					<div className="md:absolute md:top-[51.5%] md:left-[34%] mb-5 md:mb-0">
 						<div>
 							<img
 								src={features[index].item[1]?.image}
 								alt={features[index].item[1]?.name}
-								className="w-[400px] h-[300px] float-right aspect-[1/1] lg:aspect-[1/2] shadow-lg object-cover object-center mb-0 ml-3 [clip-path:var(--my-shape)] [shape-outside:var(--my-shape)] lg:[--my-shape:polygon(0%_0%,100%_0%,100%_100%,25%_100%)]"
+								className="w-[600px] h-[300px] md:w-[750px] md:h-[510px] aspect-[1/1] lg:aspect-[1/2] shadow-lg object-cover object-center mb-0  [clip-path:var(--my-shape)] [shape-outside:var(--my-shape)] lg:[--my-shape:polygon(33%_0%,100%_0%,100%_100%,0%_100%)]"
 							/>
-							<span className="w-[50%]">
-								There are many variations of passages of Lorem Ipsum available,
-								but the majority have suffered alteration in some form, by
-								injected humour, or randomised words which don't look even
-								slightly believable. If you are going to use a passage of Lorem
-								Ipsum, you need to be sure there isn't anything embarrassing
-								hidden in the middle of text. All the Lorem Ipsum generators on
-								the Internet tend to repeat predefined chunks as necessary,
-								making this the first true generator on the Internet. It uses a
-								dictionary of over 200 Latin words, combined with a handful of
-								model sentence structures, to generate Lorem Ipsum which looks
-								reasonable. The generated Lorem Ipsum is therefore always free
-								from repetition, injected humour, or non-characteristic words
-								etc.
-							</span>
 						</div>
 					</div>
-					<div className="w-[90%] md:w-[80%] mb-[50px]">
+					<div className="md:absolute md:top-[70%] md:left-[10%]">
 						<div>
 							<img
 								src={features[index].item[2]?.image}
 								alt={features[index].item[2]?.name}
-								className="w-[400px] h-[300px] float-left aspect-[1/1] lg:aspect-[1/2] shadow-lg object-cover object-center mb-0 mr-3 [clip-path:var(--my-shape)] [shape-outside:var(--my-shape)] lg:[--my-shape:polygon(0%_0%,100%_0%,75%_100%,0%_100%)]"
+								className="w-[600px] h-[300px] md:w-[430px] md:h-[300px] aspect-[1/1] lg:aspect-[1/2] shadow-lg object-cover object-center mb-0 mr-3 [clip-path:var(--my-shape)] [shape-outside:var(--my-shape)] lg:[--my-shape:polygon(0%_0%,100%_0%,65%_100%,0%_100%)]"
 							/>
-							<span className="w-[50%]">
-								There are many variations of passages of Lorem Ipsum available,
-								but the majority have suffered alteration in some form, by
-								injected humour, or randomised words which don't look even
-								slightly believable. If you are going to use a passage of Lorem
-								Ipsum, you need to be sure there isn't anything embarrassing
-								hidden in the middle of text. All the Lorem Ipsum generators on
-								the Internet tend to repeat predefined chunks as necessary,
-								making this the first true generator on the Internet. It uses a
-								dictionary of over 200 Latin words, combined with a handful of
-								model sentence structures, to generate Lorem Ipsum which looks
-								reasonable. The generated Lorem Ipsum is therefore always free
-								from repetition, injected humour, or non-characteristic words
-								etc.
-							</span>
 						</div>
 					</div>
 				</div>

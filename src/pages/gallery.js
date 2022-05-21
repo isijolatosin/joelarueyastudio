@@ -136,8 +136,10 @@ const Contact = function () {
 						{dance.length === 0 &&
 						boldness.length === 0 &&
 						consume.length === 0 ? (
-							<div className="tw-rounded-full absolute top-[130px] md:top-[170px] progress">
-								<div className="inner"></div>
+							<div className="load-wrapper mt-[70px] md:mt-[100px]">
+								<div className="circle"></div>
+								<div className="circle"></div>
+								<div className="circle"></div>
 							</div>
 						) : (
 							<>

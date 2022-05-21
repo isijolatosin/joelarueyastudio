@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import Layout from '../components/shared/Layout'
 
 const Home = function () {
+	const joelImg = require('../images/joel2.jpeg')
 	return (
 		<>
 			<Helmet>
@@ -10,16 +11,26 @@ const Home = function () {
 			</Helmet>
 			<div className="home">
 				<Layout>
-					<div className="flex flex-row justify-center items-center md:pt-10">
-						<p className="font-light text-center text-[14px] max-w-[80%] lg:max-w-[50%] my-5">
-							We at PVG International-s are customer centric, we take pride in
-							our customers. We are committed in helping with picking the right
-							hair for you, adequate information regarding education on hair
-							maintenance, and providing high quality hair extensions. We value
-							you our customers and we are committed to long time support. Our
-							customers are our sister’s. We respond within 24-48 business hours
-							Monday - Friday.
-						</p>
+					<div className="flex flex-row justify-center items-center py-10">
+						<div className="w-[80%]">
+							<img
+								src={joelImg}
+								alt="owner"
+								className="w-[600px] h-[500px] rounded-xl md:rounded-l-xl float-left aspect-[1/1] lg:aspect-[1/2] shadow-lg object-cover object-center mb-5 md:mb-0 mr-14 [clip-path:var(--my-shape)] [shape-outside:var(--my-shape)] lg:[--my-shape:polygon(0%_0%,100%_0%,75%_100%,0%_100%)]"
+							/>
+							<span className="text-neutral-50">
+								Arueya Joel graduated from the Auchi Polytechnic, Edo State
+								Nigeria with a Higher National Diploma in Fine Art (Painting).
+								Joel has held a solo exhibition supported by Guaranty Trust
+								Bank, Nigeria. He has also participated in several group
+								exhibitions and art auctions at Marvel's Attic Art Auction,
+								United Kingdom, SOGAL Art Auction and TKMG, Nigeria. He
+								participated in Kunst Asyl” art residence in Quedlinburg /
+								Germany His work was the subject of a sterling bank advert to
+								promote culture and creativity in Nigeria. His work can be found
+								in many significant homes both in Nigeria and abroad.
+							</span>
+						</div>
 					</div>
 				</Layout>
 			</div>

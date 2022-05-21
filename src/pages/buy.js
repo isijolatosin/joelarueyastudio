@@ -53,7 +53,7 @@ const Buy = () => {
 			<Layout>
 				{data &&
 					(show ? (
-						<div className="w-[100%] md:w-[80%] bg-gray-200 md:mt-10 flex flex-col md:flex-row mx-auto">
+						<div className="w-[100%] md:w-[80%] bg-gray-200 md:mt-10 flex flex-col md:flex-row mx-auto mb-12">
 							<img
 								className="flex-[0.5] h-[600px] w-[600px] object-cover"
 								src={data?.image}
@@ -101,8 +101,12 @@ const Buy = () => {
 							</div>
 						</div>
 					) : (
-						<div className="rounded-full absolute top-[130px] md:top-[170px] progress">
-							<div className="inner"></div>
+						<div>
+							<div className="load-wrapper mt-[-350px]">
+								<div className="circle"></div>
+								<div className="circle"></div>
+								<div className="circle"></div>
+							</div>
 						</div>
 					))}
 			</Layout>
