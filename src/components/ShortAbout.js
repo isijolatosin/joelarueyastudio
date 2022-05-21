@@ -9,7 +9,7 @@ function ShortAbout() {
 		navigate('/about-joelarueyastudio')
 	}
 	return (
-		<div className="relative scaleInfinite mb-10 md:mt-[200px] rounded-xl bg-blur2 flex flex-col md:flex-row items-center justify-between w-[90%] md:w-[70%] h-[550px] md:h-[250px] mx-auto">
+		<div className="relative scaleInfinite mb-10 mt-[-50px] md:mt-[200px] rounded-xl bg-blur2 flex flex-col md:flex-row items-center justify-between w-[90%] md:w-[70%] h-[550px] md:h-[250px] mx-auto">
 			<p className=" h-[200px] px-5 w-full md:w-[70%] text-white font-light text-left text-md pt-2 md:border-r-[1px] md:border-[rgba(255,255,255,0.2)] md:pr-10">
 				Arueya Joel graduated from the Auchi Polytechnic, Edo State Nigeria with
 				a Higher National Diploma in Fine Art (Painting). Joel has held a solo
