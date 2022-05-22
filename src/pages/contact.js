@@ -72,7 +72,7 @@ const Contact = function () {
 		}
 		setRequesteData([])
 		setShowResponse(true)
-		// localStorage.setItem('requestData', '')
+		localStorage.setItem('requestData', '')
 	}
 	return (
 		<>
