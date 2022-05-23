@@ -92,7 +92,7 @@ function Feat() {
 				<h1 className="text-gray-700 text-lg md:text-2xl font-bold mb-7">
 					FEATURED ART WORKS
 				</h1>
-				<div className="catBg w-full md:w-[50%] px-5 md:px-10 py-5 md:rounded-full flex items-center justify-between">
+				<div className="catBg w-full md:w-[50%] px-5 md:px-10 py-5 md:rounded-full flex items-center justify-evenly">
 					<div
 						onClick={() => {
 							setIndex(0)
@@ -132,9 +132,10 @@ function Feat() {
 					<div
 						onClick={() => handleOpenModal(index)}
 						className="card w-[80px] h-[50px] md:w-[100px] md:h-[100px]">
-						<div className="front text-white flex items-center justify-center text-xl">
-							<BsSearch />
-							<p className="text-[10px] ml-1 font-light">Gallery</p>
+						<div className="front text-white flex items-center justify-center text-xl uppercase">
+							<p className="text-[12px] ml-1 font-light my-5 text-center leading-4">
+								More {features[index]?.name} Art work
+							</p>
 						</div>
 						<div className="back  mt-0">
 							<span className="text-black">{features[index]?.name}</span>
@@ -155,21 +156,21 @@ function Feat() {
 							<span className="w-[20%]">{description[index].text}</span>
 						</div>
 					</div>
-					<div className="md:absolute md:top-[51.5%] md:left-[34%] mb-5 md:mb-0">
+					<div className="md:absolute md:top-[51.5%] md:left-[34%] lg:left-[40%] xl:left-[38%] mb-5 md:mb-0">
 						<div>
 							<img
 								src={features[index].item[1]?.image}
 								alt={features[index].item[1]?.name}
-								className="w-[600px] h-[300px] md:w-[750px] md:h-[510px] aspect-[1/1] lg:aspect-[1/2] shadow-lg object-cover object-center mb-0  [clip-path:var(--my-shape)] [shape-outside:var(--my-shape)] lg:[--my-shape:polygon(33%_0%,100%_0%,100%_100%,0%_100%)]"
+								className="w-[600px] h-[300px] md:w-[500px] md:h-[510px] lg:w-[650px] xl:w-[800px] aspect-[1/1] lg:aspect-[1/2] shadow-lg object-cover object-center mb-0  [clip-path:var(--my-shape)] [shape-outside:var(--my-shape)] md:[--my-shape:polygon(50%_0%,100%_0%,100%_100%,0%_100%)]"
 							/>
 						</div>
 					</div>
-					<div className="md:absolute md:top-[70%] md:left-[10%]">
+					<div className="md:absolute md:top-[70%] md:left-[10%] lg:left-[10%] xl:left-[10%] 2xl:left-[20%]">
 						<div>
 							<img
 								src={features[index].item[2]?.image}
 								alt={features[index].item[2]?.name}
-								className="w-[600px] h-[300px] md:w-[430px] md:h-[300px] aspect-[1/1] lg:aspect-[1/2] shadow-lg object-cover object-center mb-0 mr-3 [clip-path:var(--my-shape)] [shape-outside:var(--my-shape)] lg:[--my-shape:polygon(0%_0%,100%_0%,65%_100%,0%_100%)]"
+								className="w-[600px] h-[300px] md:w-[430px] md:h-[300px] aspect-[1/1] lg:aspect-[1/2] shadow-lg object-cover object-center mb-0 mr-3 [clip-path:var(--my-shape)] [shape-outside:var(--my-shape)] md:[--my-shape:polygon(0%_0%,100%_0%,65%_100%,0%_100%)]"
 							/>
 						</div>
 					</div>

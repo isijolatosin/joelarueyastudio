@@ -112,7 +112,7 @@ const Nav = function () {
 						{nav.navName === 'home' && 'home'}
 						{nav.navName === 'about-joelarueyastudio' && 'about'}
 						{nav.navName === 'contact-joelarueyastudio' && 'contact'}
-						{nav.navName === 'art-gallery' && 'gallery'}
+						{nav.navName === 'art-gallery' && 'all gallery'}
 					</Link>
 				))}
 			</div>
