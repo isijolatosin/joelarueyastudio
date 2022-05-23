@@ -58,7 +58,8 @@ const Success = () => {
 				console.log(`SUCCESSFULL`)
 			})
 			.catch((error) => console.log('Error' + error.message))
-	})
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [])
 
 	const handleBackToShopping = () => {
 		localStorage.setItem('address', null)
