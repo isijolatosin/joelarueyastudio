@@ -1,6 +1,5 @@
 import React from 'react'
 import axios from 'axios'
-import { BsSearch } from 'react-icons/bs'
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
 import data from '../files.json'
 
