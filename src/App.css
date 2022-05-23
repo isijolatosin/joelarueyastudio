@@ -827,7 +827,7 @@ html {
 }
 .plumpMenu {
 	position: fixed;
-	top: -140px;
+	top: -100px;
 	right: -100px;
 	width: 40%;
 	height: 300px;
