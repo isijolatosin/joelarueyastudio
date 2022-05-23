@@ -1,8 +1,7 @@
 import React, { useContext } from 'react'
+import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../context/user-context'
-import axios from 'axios'
-import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3'
 
 export default function App({ product, address }) {
 	const navigate = useNavigate()
@@ -12,7 +11,7 @@ export default function App({ product, address }) {
 	const [alert, setAlert] = React.useState(false)
 	const [emailError, setEmailError] = React.useState(false)
 
-	const handleBuy = async () => {
+	const handleBuy = () => {
 		if (
 			address?.street === '' &&
 			address?.state === '' &&
@@ -20,35 +19,37 @@ export default function App({ product, address }) {
 		) {
 			setAlert(true)
 		} else {
-			const userName = user?.displayName
-			const userPhone = user?.Phone
-			const userEmail = user?.email || address?.email
-			try {
-				const { data } = await axios.post(
-					'/.netlify/functions/create-payment-intent',
-					JSON.stringify({ product, userName, userPhone, userEmail })
-				)
-				setConfig(data.result)
-
-				handleFlutterPayment({
-					callback: (response) => {
-						// console.log(response)
-						setTrans_id(response?.transaction_id)
-						closePaymentModal() // this will close the modal programmatically
-					},
-					onClose: () => {},
-				})
-			} catch (error) {
-				console.log(error)
-				// error && navigate('/canceled')
+			const config = {
+				public_key: process.env.REACT_APP_FLUTTERWAVE_PUBLIC_KEY,
+				tx_ref: Date.now(),
+				amount: product?.price,
+				currency: 'NGN',
+				payment_options: 'card,mobilemoney,ussd',
+				customer: {
+					email: user?.email,
+					phonenumber: user?.Phone,
+					name: user?.displayName,
+				},
+				customizations: {
+					title: 'Joelarueyastudio',
+					description: product?.description,
+					logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
+				},
 			}
-
-			const userAddress =
-				address?.street + ', ' + address?.state + '. ' + address?.country
-			localStorage.setItem('address', userAddress)
+			setConfig(config)
 		}
+
+		handleFlutterPayment({
+			callback: (response) => {
+				// console.log(response)
+				setTrans_id(response?.transaction_id)
+				closePaymentModal() // this will close the modal programmatically
+			},
+			onClose: () => {},
+		})
 	}
-	const handleFlutterPayment = useFlutterwave(config && config)
+
+	const handleFlutterPayment = useFlutterwave(config)
 
 	const boughtProduct = {
 		description: product?.description,
