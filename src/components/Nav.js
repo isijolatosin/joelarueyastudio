@@ -1,11 +1,7 @@
 import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Logo from '../components/Logo'
-import { BsHandbagFill } from 'react-icons/bs'
 import { CgMenuRight } from 'react-icons/cg'
-import { BsHandbag } from 'react-icons/bs'
-import { selectItemCount, selectTotal } from '../slices/appSlices'
-import { useSelector } from 'react-redux'
 import { auth } from '../firebase'
 import { UserContext } from '../context/user-context'
 
@@ -13,8 +9,6 @@ const Nav = function () {
 	const { user } = useContext(UserContext)
 	const [menu, setMenu] = React.useState(false)
 	const [active, setActive] = React.useState('')
-	const itemCount = useSelector(selectItemCount)
-	const total = useSelector(selectTotal)
 	const navigate = useNavigate()
 	const navLinks = [
 		{
@@ -78,36 +72,6 @@ const Nav = function () {
 					))}
 				</div>
 				<div className="flex items-center">
-					<div className="flex items-center">
-						{total > 0 && (
-							<span className="text-xs font-bold -mr-4">
-								${!Number.isInteger(total) ? total : `${total}.00`}
-							</span>
-						)}
-						<Link
-							to={`/checkout/${user?.displayName}`}
-							className="flex items-center justify-between">
-							<div
-								className={
-									itemCount > 0
-										? 'ml-5 bg-neutral-200 p-2 rounded-full'
-										: 'ml-5'
-								}>
-								<div className="relative">
-									{itemCount < 1 ? (
-										<BsHandbag className="text-gray-50" />
-									) : (
-										<BsHandbagFill className="text-gray-50" />
-									)}
-									{itemCount > 0 && (
-										<div className="absolute bg-cyan-900 text-white w-[20px] h-[20px] text-xs -top-4 -right-4 rounded-full flex items-center justify-center">
-											<span>{itemCount}</span>
-										</div>
-									)}
-								</div>
-							</div>
-						</Link>
-					</div>
 					<div
 						onClick={() => setMenu(!menu)}
 						className="md:hidden ml-5 text-gray-50 text-xl">

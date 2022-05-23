@@ -30,12 +30,12 @@ function Management() {
 	}
 
 	return (
-		<>
+		<div className="home">
 			<Helmet>
 				<title>Joel Arueya Studio: ADMIN-PAGE</title>
 			</Helmet>
 			<Layout>
-				<div className="pt-10 md:pt-20 flex flex-col w-[100%] items-center">
+				<div className="bg-neutral-200 pt-10 md:pt-10 mt-[10%] flex flex-col w-[100%] items-center">
 					<Heading>Management portal</Heading>
 					<div className="my-5 w-[90%] text-cyan-900 font-bold">
 						<ul className="flex text-xs flex-row items-center justify-between w-[100%] lg:w-[50%] mx-auto">
@@ -76,7 +76,7 @@ function Management() {
 					)}
 				</div>
 			</Layout>
-		</>
+		</div>
 	)
 }
 

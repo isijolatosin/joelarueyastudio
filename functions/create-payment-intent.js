@@ -1,34 +1,36 @@
 require('dotenv').config()
 
-const stripe = require('stripe')(process.env.REACT_APP_STRIPE_PRIVATE_KEY)
-
 // domain/.netlify/functions/create-payment-intent
 exports.handler = async function (event, context) {
-	if (event.body) {
-		// eslint-disable-next-line no-unused-vars
-		const { cartItems, shipping_fee, total_amount } = JSON.parse(event.body)
+	const { product, userName, userPhone, userEmail } = JSON.parse(event.body)
 
-		const calculateOrderAmount = () => {
-			// Note - Check price compare with mongoDB
-			return shipping_fee + total_amount
+	try {
+		const config = {
+			public_key: process.env.REACT_APP_FLUTTERWAVE_PUBLIC_KEY,
+			tx_ref: Date.now(),
+			amount: product?.price,
+			currency: 'NGN',
+			payment_options: 'card,mobilemoney,ussd',
+			customer: {
+				email: userEmail,
+				phonenumber: userPhone,
+				name: userName,
+			},
+			customizations: {
+				title: 'Joelarueyastudio',
+				description: product?.description,
+				logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
+			},
 		}
 
-		try {
-			const paymentIntent = await stripe.paymentIntents.create({
-				amount: calculateOrderAmount(),
-				currency: 'usd',
-			})
-
-			return {
-				statusCode: 200,
-				body: JSON.stringify({ clientSecret: paymentIntent.client_secret }),
-			}
-		} catch (error) {
-			return {
-				statusCodes: 500,
-				body: JSON.stringify({ msg: error.message }),
-			}
+		return {
+			statusCode: 200,
+			body: JSON.stringify({ result: config }),
+		}
+	} catch (error) {
+		return {
+			statusCodes: 500,
+			body: JSON.stringify({ msg: error.message }),
 		}
 	}
-	return { statusCode: 200, body: 'Please Create Payment Intent' }
 }
