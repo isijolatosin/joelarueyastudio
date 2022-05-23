@@ -1,8 +1,8 @@
 import axios from 'axios'
 import React, { useContext } from 'react'
 import Layout from '../components/shared/Layout'
-// import Button from '../components/Button'
-import Flutter from '../components/Flutter'
+import Button from '../components/Button'
+// import Flutter from '../components/Flutter'
 import { UserContext } from '../context/user-context'
 
 const Buy = () => {
@@ -156,8 +156,8 @@ const Buy = () => {
 											className="text-neutral-500 block w-[100%] h-[40px] my-2 bg-transparent mr-5 px-3 py-1 border border-neutral-100 rounded-sm text-[15px] font-light shadow-sm placeholder:text-neutral-400 placeholder:text-xs placeholder:italic focus:outline-none focus:border-neutral-100 focus:ring-[1px] focus:ring-neutral-100 disabled:bg-neutral-50 disabled:text-neutral-500 disabled:border-neutral-200 disabled:shadow-noneinvalid:border-red-800 invalid:text-red-800 focus:invalid:border-red-800 focus:invalid:ring-red-800 outline-0"
 										/>
 									</div>
-									{/* <Button product={data} address={address} /> */}
-									<Flutter product={data} address={address} />
+									<Button product={data} address={address} />
+									{/* <Flutter product={data} address={address} /> */}
 								</div>
 							</div>
 						</div>
