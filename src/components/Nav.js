@@ -98,14 +98,14 @@ const Nav = function () {
 			<div
 				className={`${
 					menu ? 'plumpMenuClick' : 'plumpMenu'
-				} plumpMenu md:hidden bg-blur2 z-40`}>
+				} plumpMenu md:hidden z-40`}>
 				{navLinks.map((nav) => (
 					<Link
 						onClick={() => setActive(nav.navName)}
-						className={`mx-3 text-[14px] mb-7 p-1 ${
+						className={`text-[14px] w-full rounded-lg flex flex-row items-center justify-center h-[60px] mb-1 bg-blur p-1 ${
 							active === nav.navName
-								? 'text-yellow-500 font-bold'
-								: 'text-neutral-300'
+								? 'text-yellow-700 font-bold'
+								: 'text-neutral-900'
 						} hover:text-gray-400 px-3 uppercase ease duration-300`}
 						key={nav.id}
 						to={nav.link}>
