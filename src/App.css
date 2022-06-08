@@ -851,3 +851,61 @@ html {
 	border-bottom-right-radius: 70% 30%;
 	border-bottom-left-radius: 0% 0%; */
 }
+.container {
+	display: flex;
+	width: 55vw;
+}
+.panel {
+	background-size: auto 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 55vh;
+	border-radius: 30px;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	flex: 0.5;
+	margin: 10px;
+	position: relative;
+	transition: flex 0.5s ease-in;
+	-webkit-transition: all 500ms ease-in;
+}
+
+.panel h3 {
+	font-size: 10px;
+	position: absolute;
+	bottom: 20px;
+	font-style: italic;
+	font-weight: 500;
+	right: 20px;
+	margin: 0;
+	opacity: 0;
+}
+
+.panel.active {
+	flex: 5;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.panel.active h3 {
+	opacity: 1;
+	transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+	.container {
+		width: 100vw;
+	}
+
+	.panel {
+		height: 30vh;
+		margin: 3px;
+	}
+
+	.panel.active {
+		flex: 7;
+	}
+	/* .panel:nth-of-type(even),
+	.panel:nth-of-type(even) {
+		display: none;
+	} */
+}
