@@ -49,10 +49,10 @@ export default function App({ product, address }) {
 		}
 	}
 	const handleFlutterPayment = useFlutterwave(config && config)
-
 	const boughtProduct = {
 		description: product?.description,
 		length: product?.length,
+		image: product?.image,
 		name: product?.name,
 		price: product?.price,
 		series: product?.series,

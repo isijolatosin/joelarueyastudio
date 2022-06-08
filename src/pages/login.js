@@ -75,7 +75,7 @@ const Login = () => {
 											value={authUser.email}
 											onChange={handleChangeAuthUser}
 											placeholder="Email"
-											className="mt-1 block lg:w-[30%] mx-auto w-[70%] px-3 py-2 border bg-transparent border-neutral-100 text-sm shadow-xl placeholder-gray-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-200 isabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 outline-0 mb-5"
+											className="mt-1 block lg:w-[30%] mx-auto w-[70%] px-3 py-2 border bg-blur border-neutral-100 text-sm shadow-xl placeholder-gray-700 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-200 isabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 outline-0 mb-5"
 										/>
 									</div>
 									<div className="relative h-[38.4px] lg:w-[30%] w-[70%] mx-auto shadow-xl">
@@ -86,7 +86,7 @@ const Login = () => {
 											value={authUser.password}
 											onChange={handleChangeAuthUser}
 											placeholder="Password"
-											className="mt-1 block w-full px-3 py-2 border border-neutral-100 text-sm bg-transparent  placeholder-gray-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-200 disabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 outline-0 mb-5"
+											className="mt-1 block w-full px-3 py-2 border border-neutral-100 text-sm bg-blur placeholder-gray-700 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-200 disabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 outline-0 mb-5"
 										/>
 										<div className="text-neutral-500 font-light flex flex-row justify-center items-center absolute top-0 bg-pink-900 pr-2 h-full right-0 w-[50px] text-center border border-pink-900">
 											<input

@@ -116,16 +116,20 @@ const Contact = function () {
 													{search.description}
 												</p>
 											</div>
-											<div className="w-full h-[35%]">
+											<div className="w-full h-[35%] flex items-center justify-center">
 												<button
 													onClick={() => handleRequest(search)}
 													className="w-[50%] h-full bg-orange-300 hover:bg-orange-600 text-white border-r-[1px] border-white ease duration-300">
-													Request customize
+													Request Customize
 												</button>
 												<button
 													onClick={() => handlePurchase(search)}
-													className="w-[50%] bg-gray-400 hover:bg-gray-600 text-white h-full ease duration-300">
-													Buy now
+													className={
+														search.instock
+															? 'w-[50%] text-neutral-300 h-full ease duration-300 line-through border-[1px]'
+															: 'w-[50%] bg-gray-400 hover:bg-gray-600 text-white h-full ease duration-300 text-sm'
+													}>
+													{search.instock ? 'Sold Out' : 'Buy Now'}
 												</button>
 											</div>
 										</div>
@@ -164,28 +168,33 @@ const Contact = function () {
 																	alt={d.name}
 																/>
 															</div>
-															<div className="absolute shadow-lg bottom-0 bg-white h-[100px] text-[10px]">
+															<div className="absolute shadow-lg bottom-0 bg-white  w-full h-[100px] text-[10px]">
 																<div className="h-[50%]">
 																	<p className="absolute top-[-10px] bg-white px-2 rounded-t-sm ">
 																		{d.name}
 																	</p>
 																	<p className="text-blue-900 absolute top-0 right-2">
-																		Dim: {d.length}
+																		Dimension: {d.length}
 																	</p>
 																	<p className="w-full px-2 text-[11.5px] mt-4 text-gray-700 text-center font-light">
 																		{d.description}
 																	</p>
 																</div>
-																<div className="w-full h-[35%]">
+																<div className="w-full h-[35%] flex items-center justify-center">
 																	<button
 																		onClick={() => handleRequest(d)}
 																		className="w-[50%] h-full bg-orange-300 hover:bg-orange-600 text-white border-r-[1px] border-white ease duration-300">
-																		Request customize
+																		Request Customize
 																	</button>
 																	<button
+																		disabled={d.instock}
 																		onClick={() => handlePurchase(d)}
-																		className="w-[50%] bg-gray-400 hover:bg-gray-600 text-white h-full ease duration-300">
-																		Buy now
+																		className={
+																			d.instock
+																				? 'w-[50%] text-neutral-300 h-full ease duration-300 line-through border-[1px] text-sm'
+																				: 'w-[50%] bg-gray-400 hover:bg-gray-600 text-white h-full ease duration-300 text-sm'
+																		}>
+																		{d.instock ? 'Sold Out' : 'Buy Now'}
 																	</button>
 																</div>
 															</div>
@@ -211,7 +220,7 @@ const Contact = function () {
 																	alt={b.name}
 																/>
 															</div>
-															<div className="absolute shadow-lg bottom-0 bg-white h-[100px] text-[10px]">
+															<div className="absolute shadow-lg bottom-0 bg-white  w-full h-[100px] text-[10px]">
 																<div className="h-[50%]">
 																	<p className="absolute top-[-10px] bg-white px-2 rounded-t-sm ">
 																		{b.name}
@@ -223,16 +232,20 @@ const Contact = function () {
 																		{b.description}
 																	</p>
 																</div>
-																<div className="w-full h-[35%]">
+																<div className="w-full h-[35%] flex items-center justify-center">
 																	<button
 																		onClick={() => handleRequest(b)}
 																		className="w-[50%] h-full bg-orange-300 hover:bg-orange-600 text-white border-r-[1px] border-white ease duration-300">
-																		Request customize
+																		Request Customize
 																	</button>
 																	<button
 																		onClick={() => handlePurchase(b)}
-																		className="w-[50%] bg-gray-400 hover:bg-gray-600 text-white h-full ease duration-300">
-																		Buy now
+																		className={
+																			b.instock
+																				? 'w-[50%] text-neutral-300 h-full ease duration-300 line-through border-[1px]'
+																				: 'w-[50%] bg-gray-400 hover:bg-gray-600 text-white h-full ease duration-300 text-sm'
+																		}>
+																		{b.instock ? 'Sold Out' : 'Buy Now'}
 																	</button>
 																</div>
 															</div>
@@ -260,7 +273,7 @@ const Contact = function () {
 															alt={c.name}
 														/>
 													</div>
-													<div className="absolute shadow-lg bottom-0 bg-white h-[100px] text-[10px]">
+													<div className="absolute shadow-lg bottom-0 bg-white w-full h-[100px] text-[10px]">
 														<div className="h-[50%]">
 															<p className="absolute top-[-10px] bg-white px-2 rounded-t-sm ">
 																{c.name}
@@ -272,16 +285,20 @@ const Contact = function () {
 																{c.description}
 															</p>
 														</div>
-														<div className="w-full h-[35%]">
+														<div className="w-full h-[35%] flex items-center justify-center">
 															<button
 																onClick={() => handleRequest(c)}
 																className="w-[50%] h-full bg-orange-300 hover:bg-orange-600 text-white border-r-[1px] border-white ease duration-300">
-																Request customize
+																Request Customize
 															</button>
 															<button
 																onClick={() => handlePurchase(c)}
-																className="w-[50%] bg-gray-400 hover:bg-gray-600 text-white h-full ease duration-300">
-																Buy now
+																className={
+																	c.instock
+																		? 'w-[50%] text-neutral-300 h-full ease duration-300 line-through border-[1px]'
+																		: 'w-[50%] bg-gray-400 hover:bg-gray-600 text-white h-full ease duration-300 text-sm'
+																}>
+																{c.instock ? 'Sold Out' : 'Buy Now'}
 															</button>
 														</div>
 													</div>

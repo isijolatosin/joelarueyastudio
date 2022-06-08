@@ -62,10 +62,10 @@ const Success = () => {
 	}, [])
 
 	const handleBackToShopping = () => {
-		localStorage.setItem('address', null)
-		localStorage.setItem('transId', null)
-		localStorage.setItem('product', null)
-		localStorage.setItem('purchaseData', null)
+		localStorage.removeItem('address', null)
+		localStorage.removeItem('transId', null)
+		localStorage.removeItem('product', null)
+		localStorage.removeItem('purchaseData', null)
 		navigate('/')
 	}
 
@@ -84,6 +84,21 @@ const Success = () => {
 								We are currently processing your order and will send you a
 								confirmation email shortly
 							</span>
+						</div>
+						<div className="flex mt-5 bg-neutral-300 p-10">
+							<img
+								className="w-[120px] h-[120px] object-contain rounded-md mr-5"
+								src={product?.image}
+								alt={product?.name}
+							/>
+							<div>
+								<p className="text-xl font-bold w-[100%]">{product?.name}</p>
+								<p className="w-[100%] mt-2">{product?.description}</p>
+								<div className="w-[100%] flex flex-col py-2 border-neutral-200 justify-between">
+									<span>Price: #{product?.price}</span>
+									<span>Dimension: {product?.length}</span>
+								</div>
+							</div>
 						</div>
 						<div className="my-10">
 							<Button handleFunc={handleBackToShopping}>

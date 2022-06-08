@@ -69,21 +69,37 @@ function Feat() {
 		setIndex(val)
 	}
 	const features = [
-		{ item: dance.slice(0, 3), id: 1, name: 'dance' },
-		{ item: boldness.slice(0, 3), id: 2, name: 'boldness' },
-		{ item: consume.slice(0, 3), id: 3, name: 'consume' },
+		{ item: dance.slice(0, 6), id: 1, name: 'dance' },
+		{ item: boldness.slice(0, 6), id: 2, name: 'boldness' },
+		{ item: consume.slice(0, 6), id: 3, name: 'consume' },
 	]
 	const description = [
 		{
 			text: "Dance is one of the way of express one's self, Dance, the art of precise, expressive, and graceful human movement, traditionally, but not necessarily, performed in accord with musical accompaniment. Dancing developed as a natural expression of united feeling and action.",
 		},
 		{
-			text: 'Dance, the art of precise, expressive, and graceful human movement, traditionally, but not necessarily, performed in accord with musical accompaniment. Dancing developed as a natural expression of united feeling and action.',
+			text: 'Boldness, the art of precise, expressive, and graceful human movement, traditionally, but not necessarily, performed in accord with musical accompaniment. Dancing developed as a natural expression of united feeling and action.',
 		},
 		{
-			text: 'Dancing developed as a natural expression of united feeling and action.',
+			text: 'Consume developed as a natural expression of united feeling and action.',
 		},
 	]
+
+	// feature image swipe logic
+	const panels = document.querySelectorAll('.panel')
+
+	panels.forEach((panel) => {
+		panel.addEventListener('click', () => {
+			removeActiveClasses(panel)
+			panel.classList.add('active')
+		})
+	})
+
+	const removeActiveClasses = () => {
+		panels.forEach((panel) => {
+			panel.classList.remove('active')
+		})
+	}
 
 	return (
 		<div className="relative flex flex-col items-center w-full">
@@ -146,31 +162,52 @@ function Feat() {
 						<span className="text-3xl capitalize">{features[index]?.name}</span>
 					</div>
 					<div className="mb-10">
-						<div>
-							<img
-								src={features[index].item[0]?.image}
-								alt={features[index].item[0]?.name}
-								className="w-[600px] h-[300px] float-left aspect-[1/1] lg:aspect-[1/2] shadow-lg object-cover object-center mb-5 md:mb-0 mr-14 [clip-path:var(--my-shape)] [shape-outside:var(--my-shape)] lg:[--my-shape:polygon(0%_0%,100%_0%,75%_100%,0%_100%)]"
-							/>
-							<span className="w-[20%]">{description[index].text}</span>
+						<div className="w-[60%] mx-auto text-center">
+							<span>{description[index].text}</span>
 						</div>
-					</div>
-					<div className="md:absolute md:top-[51.5%] md:left-[34%] lg:left-[40%] xl:left-[38%] mb-5 md:mb-0">
-						<div>
-							<img
-								src={features[index].item[1]?.image}
-								alt={features[index].item[1]?.name}
-								className="w-[600px] h-[300px] md:w-[500px] md:h-[510px] lg:w-[650px] xl:w-[800px] aspect-[1/1] lg:aspect-[1/2] shadow-lg object-cover object-center mb-0  [clip-path:var(--my-shape)] [shape-outside:var(--my-shape)] md:[--my-shape:polygon(50%_0%,100%_0%,100%_100%,0%_100%)]"
-							/>
-						</div>
-					</div>
-					<div className="md:absolute md:top-[70%] md:left-[10%] lg:left-[10%] xl:left-[10%] 2xl:left-[20%]">
-						<div>
-							<img
-								src={features[index].item[2]?.image}
-								alt={features[index].item[2]?.name}
-								className="w-[600px] h-[300px] md:w-[430px] md:h-[300px] aspect-[1/1] lg:aspect-[1/2] shadow-lg object-cover object-center mb-0 mr-3 [clip-path:var(--my-shape)] [shape-outside:var(--my-shape)] md:[--my-shape:polygon(0%_0%,100%_0%,65%_100%,0%_100%)]"
-							/>
+						<div className="container">
+							<div
+								className="panel active"
+								style={{
+									backgroundImage: `url(${features[index].item[0]?.image})`,
+								}}>
+								<h3>...joelarueya</h3>
+							</div>
+							<div
+								className="panel"
+								style={{
+									backgroundImage: `url(${features[index].item[1]?.image})`,
+								}}>
+								<h3>...joelarueya</h3>
+							</div>
+							<div
+								className="panel"
+								style={{
+									backgroundImage: `url(${features[index].item[2]?.image})`,
+								}}>
+								<h3>...joelarueya</h3>
+							</div>
+							<div
+								className="panel"
+								style={{
+									backgroundImage: `url(${features[index].item[3]?.image})`,
+								}}>
+								<h3>...joelarueya</h3>
+							</div>
+							<div
+								className="panel"
+								style={{
+									backgroundImage: `url(${features[index].item[4]?.image})`,
+								}}>
+								<h3>...joelarueya</h3>
+							</div>
+							<div
+								className="panel"
+								style={{
+									backgroundImage: `url(${features[index].item[5]?.image})`,
+								}}>
+								<h3>...joelarueya</h3>
+							</div>
 						</div>
 					</div>
 				</div>

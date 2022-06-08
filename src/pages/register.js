@@ -82,7 +82,7 @@ const Register = () => {
 										value={authUser.name}
 										onChange={handleChangeAuthUser}
 										placeholder="Full Name"
-										className="mt-1 block lg:w-[30%] mx-auto w-[70%] px-3 py-2 border bg-transparent border-neutral-100 text-sm shadow-xl placeholder-gray-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-200 isabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 outline-0 mb-5"
+										className="mt-1 block lg:w-[30%] mx-auto w-[70%] px-3 py-2 border bg-blur border-neutral-100 text-sm shadow-xl placeholder-gray-700 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-200 isabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 outline-0 mb-5"
 									/>
 								</div>
 								<div>
@@ -93,7 +93,7 @@ const Register = () => {
 										value={authUser.email}
 										onChange={handleChangeAuthUser}
 										placeholder="Email"
-										className="mt-1 block lg:w-[30%] mx-auto w-[70%] px-3 py-2 border bg-transparent border-neutral-100 text-sm shadow-xl placeholder-gray-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-200 isabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 outline-0 mb-5"
+										className="mt-1 block lg:w-[30%] mx-auto w-[70%] px-3 py-2 border bg-blur border-neutral-100 text-sm shadow-xl placeholder-gray-700 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-200 isabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 outline-0 mb-5"
 									/>
 								</div>
 								<div>
@@ -104,7 +104,7 @@ const Register = () => {
 										value={authUser.password}
 										onChange={handleChangeAuthUser}
 										placeholder="Password"
-										className="mt-1 block lg:w-[30%] mx-auto w-[70%] px-3 py-2 border bg-transparent border-neutral-100 text-sm shadow-xl placeholder-gray-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-200 isabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 outline-0 mb-5"
+										className="mt-1 block lg:w-[30%] mx-auto w-[70%] px-3 py-2 border bg-blur border-neutral-100 text-sm shadow-xl placeholder-gray-700 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-200 isabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 outline-0 mb-5"
 									/>
 								</div>
 								<div>
@@ -115,7 +115,7 @@ const Register = () => {
 										value={authUser.phone}
 										onChange={handleChangeAuthUser}
 										placeholder="Phone-Number (optional)"
-										className="mt-1 block lg:w-[30%] mx-auto w-[70%] px-3 py-2 border bg-transparent border-neutral-100 text-sm shadow-xl placeholder-gray-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-200 isabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 outline-0 mb-5"
+										className="mt-1 block lg:w-[30%] mx-auto w-[70%] px-3 py-2 border bg-blur border-neutral-100 text-sm shadow-xl placeholder-gray-700 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-200 isabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 outline-0 mb-5"
 									/>
 								</div>
 								<div className="text-center text-xs text-red-800">

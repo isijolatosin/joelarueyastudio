@@ -43,17 +43,16 @@ const Buy = () => {
 	setTimeout(() => {
 		setShow(true)
 	}, 3000)
-
-	const lengthArr = [
-		'4ft/3ft',
-		'4ft/3.5ft',
-		'4ft/4ft',
-		'4ft/4.5ft',
-		'4ft/5ft',
-		'5ft/4ft',
-		'5ft/4.5ft',
-		'5ft/5ft',
-	].filter((a) => a !== data?.length)
+	//
+	// 	const lengthArr = [
+	// 		'2ft/2.5ft',
+	// 		'3ft/4ft',
+	// 		'4ft/3ft',
+	// 		'4ft/4ft',
+	// 		'4ft/5ft',
+	// 		'5ft/4ft',
+	// 		'5ft/5ft',
+	// 	].filter((a) => a !== data?.length)
 
 	const handleChangeAuthUser = (e) => {
 		setaddress({ ...address, [e.target.name]: e.target.value })
@@ -101,7 +100,7 @@ const Buy = () => {
 											<span>#{data?.price}</span>
 											<span>{data?.length}</span>
 										</div>
-										<div>
+										{/* <div>
 											<select
 												className=" text-neutral-500 block w-[100%] h-[40px] my-10 bg-transparent mr-5 px-3 py-1 border border-neutral-100 rounded-sm text-[15px] font-light shadow-sm placeholder-neutral-200 focus:outline-none focus:border-neutral-100 focus:ring-[1px] focus:ring-neutral-100 disabled:bg-neutral-50 disabled:text-neutral-500 disabled:border-neutral-200 disabled:shadow-noneinvalid:border-red-800 invalid:text-red-800 focus:invalid:border-red-800 focus:invalid:ring-red-800 outline-0"
 												// onChange={handleOnChange}
@@ -112,7 +111,7 @@ const Buy = () => {
 													<option key={idx}>{len}</option>
 												))}
 											</select>
-										</div>
+										</div> */}
 									</div>
 									<div className="border-b-[1px] border-neutral-400 pb-10">
 										{!user?.email && (
